@@ -1,0 +1,12 @@
+main {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.form {
+    padding: 20px;
+}
+
+.form-field {
+    margin: 20px 0;
+}

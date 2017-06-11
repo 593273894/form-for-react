@@ -1,0 +1,11 @@
+bin
+.idea
+.vscode
+.DS_Store
+.sass-cache
+static
+node_modules
+npm-debug.log
+__build__
+debug.log
+client
