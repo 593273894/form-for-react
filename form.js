@@ -84,16 +84,28 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_0__;
 
 /***/ }),
 /* 1 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__FormError__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_classnames__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_classnames__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __assign = (this && this.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
 var __rest = (this && this.__rest) || function (s, e) {
     var t = {};
     for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
@@ -103,21 +115,24 @@ var __rest = (this && this.__rest) || function (s, e) {
             t[p[i]] = s[p[i]];
     return t;
 };
-
-
-
-
-const defaultRequiredMessage = 'this field is required';
-const createFromField = (Input) => {
-    return _a = class FormField extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
-            constructor(props) {
-                super(props);
-                this.propsValue = props.value;
-                this.state = {
+Object.defineProperty(exports, "__esModule", { value: true });
+var react_1 = __webpack_require__(0);
+var FormError_1 = __webpack_require__(8);
+var classnames_1 = __webpack_require__(3);
+var prop_types_1 = __webpack_require__(6);
+var defaultRequiredMessage = 'this field is required';
+var createFromField = function (Input) {
+    return _a = (function (_super) {
+            __extends(FormField, _super);
+            function FormField(props) {
+                var _this = _super.call(this, props) || this;
+                _this.propsValue = props.value;
+                _this.state = {
                     value: props.value
                 };
+                return _this;
             }
-            componentDidMount() {
+            FormField.prototype.componentDidMount = function () {
                 this.context.api.addField({
                     name: this.props.name,
                     validate: this.props.validate,
@@ -127,11 +142,11 @@ const createFromField = (Input) => {
                 if (this.props.value !== undefined && this.props.value !== '') {
                     this.context.api.setValue(this.props.name, this.props.value);
                 }
-            }
-            componentWillUnmount() {
+            };
+            FormField.prototype.componentWillUnmount = function () {
                 this.context.api.removeField(this.props.name);
-            }
-            componentWillReceiveProps(nextprops) {
+            };
+            FormField.prototype.componentWillReceiveProps = function (nextprops) {
                 if (nextprops.required !== this.props.required) {
                     this.context.api.changeField({
                         name: nextprops.name,
@@ -146,70 +161,72 @@ const createFromField = (Input) => {
                         value: nextprops.value
                     });
                 }
-            }
-            isEqual(value1, value2) {
+            };
+            FormField.prototype.isEqual = function (value1, value2) {
                 if (typeof value1 === 'string' || typeof value1 === 'undefined' || typeof value1 === 'boolean' ||
                     typeof value1 === 'number') {
                     return value1 === value2;
                 }
                 else if (Array.isArray(value1)) {
-                    return value1.every(item => value2.indexOf(item) >= 0) && value2.every(item => value1.indexOf(item) >= 0);
+                    return value1.every(function (item) { return value2.indexOf(item) >= 0; }) && value2.every(function (item) { return value1.indexOf(item) >= 0; });
                 }
                 else {
                     console.error('value should be a string, number, array or boolean');
                     return true;
                 }
-            }
-            renderLabel() {
-                const { label, required, name } = this.props;
+            };
+            FormField.prototype.renderLabel = function () {
+                var _a = this.props, label = _a.label, required = _a.required, name = _a.name;
                 if (label !== undefined) {
-                    return (__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("label", { htmlFor: name, className: "field-label" },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span", { className: "required" }, required && '*'),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span", { className: "label" }, label)));
+                    return (react_1.default.createElement("label", { htmlFor: name, className: "field-label" },
+                        react_1.default.createElement("span", { className: "required" }, required && '*'),
+                        react_1.default.createElement("span", { className: "label" }, label)));
                 }
                 else {
                     return null;
                 }
-            }
-            renderInput() {
-                const _a = this.props, { name, label, onChange, value, disabled } = _a, rest = __rest(_a, ["name", "label", "onChange", "value", "disabled"]);
-                const { api } = this.context;
-                return (__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "field-input" },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Input, Object.assign({ api: this.context.api, name: name, label: label, value: this.state.value, disabled: disabled, changeFieldValue: value => {
+            };
+            FormField.prototype.renderInput = function () {
+                var _this = this;
+                var _a = this.props, name = _a.name, label = _a.label, onChange = _a.onChange, value = _a.value, disabled = _a.disabled, rest = __rest(_a, ["name", "label", "onChange", "value", "disabled"]);
+                var api = this.context.api;
+                return (react_1.default.createElement("div", { className: "field-input" },
+                    react_1.default.createElement(Input, __assign({ api: this.context.api, name: name, label: label, value: this.state.value, disabled: disabled, changeFieldValue: function (value) {
                             onChange && onChange(name, value);
                             api.setValue(name, value);
-                            this.setState({
+                            _this.setState({
                                 value: value
                             });
                         } }, rest))));
-            }
-            renderHelp() {
-                const { help } = this.props;
-                return (help && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span", { className: "field-help" }, help));
-            }
-            renderError() {
-                const { name } = this.props;
-                const { api } = this.context;
-                let touched = api.getTouched();
+            };
+            FormField.prototype.renderHelp = function () {
+                var help = this.props.help;
+                return (help && react_1.default.createElement("span", { className: "field-help" }, help));
+            };
+            FormField.prototype.renderError = function () {
+                var name = this.props.name;
+                var api = this.context.api;
+                var touched = api.getTouched();
                 touched = touched[name] || touched.__allTouched;
-                return (touched && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__FormError__["a" /* default */], { name: name }));
-            }
-            render() {
-                const { fieldClassName, fieldStyle, disabled } = this.props;
-                return (__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: __WEBPACK_IMPORTED_MODULE_2_classnames___default()('form-field', fieldClassName, { disabled }), style: fieldStyle },
+                return (touched && react_1.default.createElement(FormError_1.default, { name: name }));
+            };
+            FormField.prototype.render = function () {
+                var _a = this.props, fieldClassName = _a.fieldClassName, fieldStyle = _a.fieldStyle, disabled = _a.disabled;
+                return (react_1.default.createElement("div", { className: classnames_1.default('form-field', fieldClassName, { disabled: disabled }), style: fieldStyle },
                     this.renderLabel(),
                     this.renderInput(),
                     this.renderHelp(),
                     this.renderError()));
-            }
-        },
+            };
+            return FormField;
+        }(react_1.default.Component)),
         _a.contextTypes = {
-            api: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.object
+            api: prop_types_1.default.object
         },
         _a;
     var _a;
 };
-/* harmony default export */ __webpack_exports__["a"] = (createFromField);
+exports.default = createFromField;
 
 
 /***/ }),
@@ -623,27 +640,35 @@ module.exports = ReactPropTypesSecret;
 
 /***/ }),
 /* 8 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_classnames__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_classnames__);
 
-
-
-class FormError extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
-    constructor(props, context) {
-        super(props, context);
-        this.error = null;
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var react_1 = __webpack_require__(0);
+var prop_types_1 = __webpack_require__(6);
+var classnames_1 = __webpack_require__(3);
+var FormError = (function (_super) {
+    __extends(FormError, _super);
+    function FormError(props, context) {
+        var _this = _super.call(this, props, context) || this;
+        _this.error = null;
+        return _this;
     }
-    shouldComponentUpdate() {
-        const { name } = this.props;
-        const { api } = this.context;
-        const error = api.getErrors(name);
+    FormError.prototype.shouldComponentUpdate = function () {
+        var name = this.props.name;
+        var api = this.context.api;
+        var error = api.getErrors(name);
         if (error !== this.error) {
             this.error = error;
             return true;
@@ -651,18 +676,19 @@ class FormError extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component 
         else {
             return false;
         }
-    }
-    render() {
-        const { name, className } = this.props;
-        const { api } = this.context;
-        const error = api.getErrors()[name];
-        return (error ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span", { className: __WEBPACK_IMPORTED_MODULE_2_classnames___default()('validation-message', className) }, error) : null);
-    }
-}
+    };
+    FormError.prototype.render = function () {
+        var _a = this.props, name = _a.name, className = _a.className;
+        var api = this.context.api;
+        var error = api.getErrors()[name];
+        return (error ? react_1.default.createElement("span", { className: classnames_1.default('validation-message', className) }, error) : null);
+    };
+    return FormError;
+}(react_1.default.Component));
 FormError.contextTypes = {
-    api: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object
+    api: prop_types_1.default.object
 };
-/* harmony default export */ __webpack_exports__["a"] = (FormError);
+exports.default = FormError;
 
 
 /***/ }),
@@ -740,34 +766,42 @@ module.exports = warning;
 
 /***/ }),
 /* 10 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_classnames__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_classnames__);
 
-
-
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var react_1 = __webpack_require__(0);
+var prop_types_1 = __webpack_require__(6);
+var classnames_1 = __webpack_require__(3);
 function noop() { }
-const NO_ERROR = null;
-class Form extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
+var NO_ERROR = null;
+var Form = (function (_super) {
+    __extends(Form, _super);
+    function Form(props) {
+        var _this = _super.call(this, props) || this;
+        _this.state = {
             errors: {}
         };
-        this.values = {};
-        this.touched = {
+        _this.values = {};
+        _this.touched = {
             __allTouched: false
         };
-        this.validates = {};
-        this.fields = {};
+        _this.validates = {};
+        _this.fields = {};
+        return _this;
     }
-    getChildContext() {
+    Form.prototype.getChildContext = function () {
         return {
             api: {
                 getErrors: this.getErrors.bind(this),
@@ -779,37 +813,37 @@ class Form extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                 removeField: this.removeField.bind(this),
             }
         };
-    }
-    addField(field) {
+    };
+    Form.prototype.addField = function (field) {
         this.fields[field.name] = field;
         this.values[field.name] = '';
-    }
-    changeField(field) {
+    };
+    Form.prototype.changeField = function (field) {
         this.fields[field.name] = field;
         this.setValue(field.name, this.values[field.name]);
-    }
-    removeField(name) {
+    };
+    Form.prototype.removeField = function (name) {
         delete this.fields[name];
         this.values[name] = '';
-    }
-    validateFields() {
-        let errors = {};
-        for (let name in this.fields) {
-            const field = this.fields[name];
-            if (isEmpty(this.values[name])) {
+    };
+    Form.prototype.validateFields = function () {
+        var errors = {};
+        for (var name_1 in this.fields) {
+            var field = this.fields[name_1];
+            if (isEmpty(this.values[name_1])) {
                 if (field.required) {
-                    errors[name] = field.requiredMessage;
+                    errors[name_1] = field.requiredMessage;
                 }
                 else {
-                    errors[name] = NO_ERROR;
+                    errors[name_1] = NO_ERROR;
                 }
             }
             else {
-                if (typeof this.fields[name].validate === 'function') {
-                    errors[name] = this.fields[name].validate(this.values[name], this.values);
+                if (typeof this.fields[name_1].validate === 'function') {
+                    errors[name_1] = this.fields[name_1].validate(this.values[name_1], this.values);
                 }
                 else {
-                    errors[name] = NO_ERROR;
+                    errors[name_1] = NO_ERROR;
                 }
             }
         }
@@ -822,45 +856,45 @@ class Form extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                 return !value;
             }
         }
-    }
-    setValue(name, value) {
+    };
+    Form.prototype.setValue = function (name, value) {
         this.values[name] = value;
         this.touched[name] = true;
-        const errors = this.validateFields();
-        let noerror = true;
-        for (let name in errors) {
-            if (errors[name] !== NO_ERROR) {
+        var errors = this.validateFields();
+        var noerror = true;
+        for (var name_2 in errors) {
+            if (errors[name_2] !== NO_ERROR) {
                 noerror = false;
                 break;
             }
         }
         this.setState({
-            errors
+            errors: errors
         });
         noerror ? this.onValid() : this.onInvalid();
-    }
-    getValues() {
+    };
+    Form.prototype.getValues = function () {
         return this.values;
-    }
-    getErrors() {
+    };
+    Form.prototype.getErrors = function () {
         return this.state.errors;
-    }
-    getTouched() {
+    };
+    Form.prototype.getTouched = function () {
         return this.touched;
-    }
-    onValid() {
+    };
+    Form.prototype.onValid = function () {
         this.props.onValid && this.props.onValid();
-    }
-    onInvalid() {
+    };
+    Form.prototype.onInvalid = function () {
         this.props.onInvalid && this.props.onInvalid();
-    }
-    onSubmit(e) {
+    };
+    Form.prototype.onSubmit = function (e) {
         e.preventDefault();
         this.touched.__allTouched = true;
-        const errors = this.validateFields();
-        let noerror = true;
-        for (let name in errors) {
-            if (errors[name] !== NO_ERROR) {
+        var errors = this.validateFields();
+        var noerror = true;
+        for (var name_3 in errors) {
+            if (errors[name_3] !== NO_ERROR) {
                 noerror = false;
                 break;
             }
@@ -869,135 +903,185 @@ class Form extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
             this.props.onSubmit && this.props.onSubmit(this.values);
         }
         this.setState({
-            errors
+            errors: errors
         });
-    }
-    render() {
-        const { className } = this.props;
-        return (__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("form", { className: __WEBPACK_IMPORTED_MODULE_2_classnames___default()('form', className), onSubmit: e => this.onSubmit(e) }, this.props.children));
-    }
-}
-/* harmony export (immutable) */ __webpack_exports__["a"] = Form;
-
+    };
+    Form.prototype.render = function () {
+        var _this = this;
+        var className = this.props.className;
+        return (react_1.default.createElement("form", { className: classnames_1.default('form', className), onSubmit: function (e) { return _this.onSubmit(e); } }, this.props.children));
+    };
+    return Form;
+}(react_1.default.Component));
 Form.defaultProps = {
     onSubmit: noop,
 };
 Form.childContextTypes = {
-    api: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object
+    api: prop_types_1.default.object
 };
+exports.default = Form;
 
 
 /***/ }),
 /* 11 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__createFormField__ = __webpack_require__(1);
 
-
-const emptyArray = [];
-class CheckboxGroup extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
-    constructor(props) {
-        super(props);
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var react_1 = __webpack_require__(0);
+var createFormField_1 = __webpack_require__(1);
+var emptyArray = [];
+var CheckboxGroup = (function (_super) {
+    __extends(CheckboxGroup, _super);
+    function CheckboxGroup(props) {
+        return _super.call(this, props) || this;
     }
-    render() {
-        const { value = emptyArray, options, changeFieldValue, name } = this.props;
-        return (__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "checkbox-group", id: name }, options.map((option) => {
-            const checked = value.indexOf(option.value) >= 0;
-            return (__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("label", { key: option.value, className: "checkbox" },
+    CheckboxGroup.prototype.render = function () {
+        var _a = this.props, _b = _a.value, value = _b === void 0 ? emptyArray : _b, options = _a.options, changeFieldValue = _a.changeFieldValue, name = _a.name;
+        return (react_1.default.createElement("div", { className: "checkbox-group", id: name }, options.map(function (option) {
+            var checked = value.indexOf(option.value) >= 0;
+            return (react_1.default.createElement("label", { key: option.value, className: "checkbox" },
                 option.label,
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { name: option.name, type: "checkbox", checked: checked, onChange: () => {
+                react_1.default.createElement("input", { name: option.name, type: "checkbox", checked: checked, onChange: function () {
                         if (checked) {
-                            changeFieldValue(value.filter(item => item !== option.value));
+                            changeFieldValue(value.filter(function (item) { return item !== option.value; }));
                         }
                         else {
-                            changeFieldValue([...value, option.value]);
+                            changeFieldValue(value.concat([option.value]));
                         }
                     } })));
         })));
-    }
-}
-/* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__createFormField__["a" /* default */])(CheckboxGroup));
+    };
+    return CheckboxGroup;
+}(react_1.default.Component));
+exports.default = createFormField_1.default(CheckboxGroup);
 
 
 /***/ }),
 /* 12 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__createFormField__ = __webpack_require__(1);
 
-
-const emptyString = '';
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var react_1 = __webpack_require__(0);
+var createFormField_1 = __webpack_require__(1);
+var emptyString = '';
 function noop() { }
-class Input extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
-    render() {
-        const { name, value = emptyString, changeFieldValue, placeholder, type = 'text', onFocus = noop, disabled, autoComplete = 'off', style } = this.props;
-        return (__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { id: name, type: type, className: "input", value: value, onChange: e => {
+var Input = (function (_super) {
+    __extends(Input, _super);
+    function Input() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Input.prototype.render = function () {
+        var _a = this.props, name = _a.name, _b = _a.value, value = _b === void 0 ? emptyString : _b, changeFieldValue = _a.changeFieldValue, placeholder = _a.placeholder, _c = _a.type, type = _c === void 0 ? 'text' : _c, _d = _a.onFocus, onFocus = _d === void 0 ? noop : _d, disabled = _a.disabled, _e = _a.autoComplete, autoComplete = _e === void 0 ? 'off' : _e, style = _a.style;
+        return (react_1.default.createElement("input", { id: name, type: type, className: "input", value: value, onChange: function (e) {
                 changeFieldValue(e.target.value);
             }, placeholder: placeholder, disabled: disabled, onFocus: onFocus, autoComplete: autoComplete, style: style }));
-    }
-}
-/* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__createFormField__["a" /* default */])(Input));
+    };
+    return Input;
+}(react_1.default.Component));
+exports.default = createFormField_1.default(Input);
 
 
 /***/ }),
 /* 13 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__createFormField__ = __webpack_require__(1);
 
-
-class RadioGroup extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
-    constructor(props) {
-        super(props);
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var react_1 = __webpack_require__(0);
+var createFormField_1 = __webpack_require__(1);
+var RadioGroup = (function (_super) {
+    __extends(RadioGroup, _super);
+    function RadioGroup(props) {
+        return _super.call(this, props) || this;
     }
-    render() {
-        const { value, options, changeFieldValue, name } = this.props;
-        return (__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "radio-group", id: name }, options.map((option) => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("label", { key: option.value, className: "radio" },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { name: option.name, type: "radio", checked: option.value === value, onChange: () => {
-                    changeFieldValue(option.value);
-                } }),
-            option.label))));
-    }
-}
-/* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__createFormField__["a" /* default */])(RadioGroup));
+    RadioGroup.prototype.render = function () {
+        var _a = this.props, value = _a.value, options = _a.options, changeFieldValue = _a.changeFieldValue, name = _a.name;
+        return (react_1.default.createElement("div", { className: "radio-group", id: name }, options.map(function (option) {
+            return react_1.default.createElement("label", { key: option.value, className: "radio" },
+                react_1.default.createElement("input", { name: option.name, type: "radio", checked: option.value === value, onChange: function () {
+                        changeFieldValue(option.value);
+                    } }),
+                option.label);
+        })));
+    };
+    return RadioGroup;
+}(react_1.default.Component));
+exports.default = createFormField_1.default(RadioGroup);
 
 
 /***/ }),
 /* 14 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__createFormField__ = __webpack_require__(1);
 
-
-const emptyString = '';
-class Select extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
-    constructor(props) {
-        super(props);
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var react_1 = __webpack_require__(0);
+var createFormField_1 = __webpack_require__(1);
+var emptyString = '';
+var Select = (function (_super) {
+    __extends(Select, _super);
+    function Select(props) {
+        return _super.call(this, props) || this;
     }
-    render() {
-        const { value = emptyString, options, changeFieldValue, name } = this.props;
-        return (__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("select", { name: name, id: name, value: value, onChange: (e) => {
+    Select.prototype.render = function () {
+        var _a = this.props, _b = _a.value, value = _b === void 0 ? emptyString : _b, options = _a.options, changeFieldValue = _a.changeFieldValue, name = _a.name;
+        return (react_1.default.createElement("select", { name: name, id: name, value: value, onChange: function (e) {
                 changeFieldValue(e.target.value);
             } },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option", { value: "" }, " --- "),
-            options.map((option) => {
-                return (__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option", { key: option.value, value: option.value }, option.label));
+            react_1.default.createElement("option", { value: "" }, " --- "),
+            options.map(function (option) {
+                return (react_1.default.createElement("option", { key: option.value, value: option.value }, option.label));
             })));
-    }
-}
-/* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__createFormField__["a" /* default */])(Select));
+    };
+    return Select;
+}(react_1.default.Component));
+exports.default = createFormField_1.default(Select);
 
 
 /***/ }),
@@ -1657,32 +1741,25 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 
 /***/ }),
 /* 18 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Form__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__FormError__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__createFormField__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_Input__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_RadioGroup__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_CheckboxGroup__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_Select__ = __webpack_require__(14);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Form", function() { return __WEBPACK_IMPORTED_MODULE_0__Form__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "FormError", function() { return __WEBPACK_IMPORTED_MODULE_1__FormError__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "createFormField", function() { return __WEBPACK_IMPORTED_MODULE_2__createFormField__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Input", function() { return __WEBPACK_IMPORTED_MODULE_3__components_Input__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "RadioGroup", function() { return __WEBPACK_IMPORTED_MODULE_4__components_RadioGroup__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "CheckboxGroup", function() { return __WEBPACK_IMPORTED_MODULE_5__components_CheckboxGroup__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Select", function() { return __WEBPACK_IMPORTED_MODULE_6__components_Select__["a"]; });
 
-
-
-
-
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var Form_1 = __webpack_require__(10);
+exports.Form = Form_1.default;
+var FormError_1 = __webpack_require__(8);
+exports.FormError = FormError_1.default;
+var createFormField_1 = __webpack_require__(1);
+exports.createFormField = createFormField_1.default;
+var Input_1 = __webpack_require__(12);
+exports.Input = Input_1.default;
+var RadioGroup_1 = __webpack_require__(13);
+exports.RadioGroup = RadioGroup_1.default;
+var CheckboxGroup_1 = __webpack_require__(11);
+exports.CheckboxGroup = CheckboxGroup_1.default;
+var Select_1 = __webpack_require__(14);
+exports.Select = Select_1.default;
 
 
 /***/ })
