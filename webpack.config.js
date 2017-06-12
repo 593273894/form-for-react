@@ -7,24 +7,25 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, './'),
         filename: 'form.js',
-        library: 'form',
-        libraryTarget: "umd",
+        library: 'form-for-react',
+        libraryTarget: "commonjs2",
     },
-    externals: {
-        react: {
-            root: 'React',
-            commonjs2: 'react',
-            commonjs: 'react',
-            amd: 'react',
-        },
-    },
+    externals: 'react',
     resolve: {
         extensions: [".webpack.js", ".web.js", ".ts", ".tsx", ".js"]
     },
     module: {
         loaders: [{
             test: /\.(ts|tsx)$/,
+            exclude: /node_modules/,
             loader: "ts-loader",
         }]
     },
+    plugins:[
+        new webpack.DefinePlugin({
+            "process.env":{
+                NODE_ENV: JSON.stringify('production')
+            }
+        })
+    ]
 };

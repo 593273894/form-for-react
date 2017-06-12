@@ -4,7 +4,7 @@
     "description": "Form For React is a lightweight frame, support custom form field",
     "main": "form.js",
     "scripts": {
-        "build": "webpack"
+        "build": "set NODE_ENV=production&&webpack"
     },
     "keywords": [],
     "author": "",
