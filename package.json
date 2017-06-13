@@ -4,7 +4,8 @@
     "description": "Form For React is a lightweight frame, support custom form field",
     "main": "form.js",
     "scripts": {
-        "build": "set NODE_ENV=production&&webpack"
+        "build": "set NODE_ENV=production&&webpack -p",
+        "test": "jest"
     },
     "keywords": [],
     "author": "",
@@ -15,11 +16,38 @@
     "devDependencies": {
         "@types/react": "^15.0.27",
         "@types/react-dom": "^15.5.0",
+        "babel-jest": "^20.0.3",
+        "babel-preset-es2015": "^6.24.1",
+        "babel-preset-react": "^6.24.1",
+        "enzyme": "^2.8.2",
+        "jest": "^20.0.4",
         "prop-types": "^15.5.10",
-        "ts-loader": "^2.1.0",
         "react": "^15.5.4",
+        "react-addons-test-utils": "^15.5.1",
         "react-dom": "^15.5.4",
+        "react-test-renderer": "^15.5.4",
+        "regenerator-runtime": "^0.10.5",
+        "ts-loader": "^2.1.0",
         "typescript": "^2.3.4",
         "webpack": "^2.6.1"
+    },
+    "jest": {
+        "testRegex": "(/tests/.*|\\.(test|spec))\\.(js)$",
+        "unmockedModulePathPatterns": [
+            "react",
+            "react-dom",
+            "react-addons-test-utils",
+            "fbjs",
+            "enzyme",
+            "cheerio",
+            "htmlparser2",
+            "underscore",
+            "lodash",
+            "domhandler",
+            "object.assign",
+            "define-properties",
+            "function-bind",
+            "object-keys"
+        ]
     }
 }

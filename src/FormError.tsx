@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import { NO_ERROR } from './constants';
 
 export interface FormErrorProps {
     name: string;
@@ -14,7 +15,7 @@ class FormError extends React.Component<FormErrorProps, any> {
     }
     static contextTypes = {
         api: PropTypes.object
-    }
+    };
     error: string | null;
     shouldComponentUpdate() {
         const { name } = this.props;
@@ -33,7 +34,7 @@ class FormError extends React.Component<FormErrorProps, any> {
         const { api } = this.context;
         const error = api.getErrors()[name];
         return (
-            error ? <span className={classnames('validation-message', className)}>{error}</span> : null
+            error !== NO_ERROR ? <span className={classnames('validation-message', className)}>{error}</span> : null
         );
     }
 }

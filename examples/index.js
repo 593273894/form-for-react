@@ -1,6 +1,6 @@
 'use strict';
 
-const { Form, Input, RadioGroup, CheckboxGroup, Select } = form;
+const { Form, Input, RadioGroup, CheckboxGroup, Select } = window['form-for-react'];
 
 class FormExample extends React.Component {
     constructor(props) {

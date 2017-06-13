@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
+
 module.exports = {
     entry: {
         form: path.resolve(__dirname, './src/index.tsx')
@@ -8,9 +9,16 @@ module.exports = {
         path: path.resolve(__dirname, './'),
         filename: 'form.js',
         library: 'form-for-react',
-        libraryTarget: "commonjs2",
+        libraryTarget: "umd",
     },
-    externals: 'react',
+    externals: {
+        react: {
+            root: 'React',
+            commonjs2: 'react',
+            commonjs: 'react',
+            amd: 'react',
+        },
+    },
     resolve: {
         extensions: [".webpack.js", ".web.js", ".ts", ".tsx", ".js"]
     },
@@ -21,10 +29,10 @@ module.exports = {
             loader: "ts-loader",
         }]
     },
-    plugins:[
+    plugins: [
         new webpack.DefinePlugin({
-            "process.env":{
-                NODE_ENV: JSON.stringify('production')
+            "process.env": {
+                NODE_ENV: JSON.stringify(process.env.NODE_ENV)
             }
         })
     ]

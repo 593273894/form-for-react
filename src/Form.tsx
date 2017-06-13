@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import { NO_ERROR } from './constants';
 
 function noop() { }
-const NO_ERROR = null;
 interface State {
     errors: Object;
 }

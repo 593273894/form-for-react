@@ -2,7 +2,7 @@ import React from 'react';
 import FormError from './FormError';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-
+import { defaultRequiredMessage } from './constants';
 export interface FormFieldProps {
     name: string;
     label: string;
@@ -16,8 +16,6 @@ export interface FormFieldProps {
     disabled?: boolean;
     help?: string;
 }
-
-const defaultRequiredMessage = 'this field is required';
 
 const createFromField = (Input) => {
     return class FormField extends React.Component<FormFieldProps, any> {
@@ -136,7 +134,7 @@ const createFromField = (Input) => {
                 </div>
             );
         }
-    }
-}
+    };
+};
 
 export default createFromField;
