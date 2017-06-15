@@ -1,5 +1,4 @@
 import React from 'react';
-import { mount } from 'enzyme';
 import { Form, Input, RadioGroup, CheckboxGroup, Select } from '../form';
 
 test('form component change', () => {
@@ -42,6 +41,8 @@ test('form component change', () => {
                 onChange={(paraName, paraValue) => { name = paraName; value = paraValue }} />
         </Form>
     );
+    expect(component).toMatchSnapshot();
+
     component.find('#input').simulate('change', { target: { value: 'apple' } });
     expect(name).toBe('input');
     expect(value).toBe('apple');
@@ -72,6 +73,8 @@ test('form component change', () => {
     component.find('#select').simulate('change', { target: { value: 'dog' } });
     expect(name).toBe('select');
     expect(value).toEqual('dog');
+
+    expect(component).toMatchSnapshot();
 });
 
 test('form submit', () => {
@@ -109,6 +112,8 @@ test('form submit', () => {
                 }]} />
         </Form>
     );
+    expect(component).toMatchSnapshot();
+
     component.find('#input').simulate('change', { target: { value: 'apple' } });
     component.find('#radio').childAt(0).childAt(0).simulate('change');
     component.find('#checkbox').childAt(0).childAt(0).simulate('change');
@@ -120,4 +125,6 @@ test('form submit', () => {
         "checkbox": ['apple'],
         "select": 'cat',
     });
+
+    expect(component).toMatchSnapshot();
 });

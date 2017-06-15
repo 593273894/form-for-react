@@ -1,0 +1,413 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`custom validation 1`] = `
+<e
+  onSubmit={[Function]}
+>
+  <form
+    className="form"
+    onSubmit={[Function]}
+  >
+    <n
+      label="input"
+      name="input"
+      validate={[Function]}
+    >
+      <div
+        className="form-field"
+      >
+        <label
+          className="field-label"
+          htmlFor="input"
+        >
+          <span
+            className="required"
+          />
+          <span
+            className="label"
+          >
+            input
+          </span>
+        </label>
+        <div
+          className="field-input"
+        >
+          <e
+            api={
+              Object {
+                "addField": [Function],
+                "changeField": [Function],
+                "getErrors": [Function],
+                "getTouched": [Function],
+                "getValues": [Function],
+                "removeField": [Function],
+                "setValue": [Function],
+              }
+            }
+            changeFieldValue={[Function]}
+            label="input"
+            name="input"
+            validate={[Function]}
+          >
+            <input
+              autoComplete="off"
+              className="input"
+              id="input"
+              onChange={[Function]}
+              onFocus={[Function]}
+              type="text"
+              value=""
+            />
+          </e>
+        </div>
+      </div>
+    </n>
+  </form>
+</e>
+`;
+
+exports[`custom validation 2`] = `
+<e
+  onSubmit={[Function]}
+>
+  <form
+    className="form"
+    onSubmit={[Function]}
+  >
+    <n
+      label="input"
+      name="input"
+      validate={[Function]}
+    >
+      <div
+        className="form-field"
+      >
+        <label
+          className="field-label"
+          htmlFor="input"
+        >
+          <span
+            className="required"
+          />
+          <span
+            className="label"
+          >
+            input
+          </span>
+        </label>
+        <div
+          className="field-input"
+        >
+          <e
+            api={
+              Object {
+                "addField": [Function],
+                "changeField": [Function],
+                "getErrors": [Function],
+                "getTouched": [Function],
+                "getValues": [Function],
+                "removeField": [Function],
+                "setValue": [Function],
+              }
+            }
+            changeFieldValue={[Function]}
+            label="input"
+            name="input"
+            validate={[Function]}
+            value="123"
+          >
+            <input
+              autoComplete="off"
+              className="input"
+              id="input"
+              onChange={[Function]}
+              onFocus={[Function]}
+              type="text"
+              value="123"
+            />
+          </e>
+        </div>
+        <e
+          name="input"
+        />
+      </div>
+    </n>
+  </form>
+</e>
+`;
+
+exports[`form onvalid oninvalid method 1`] = `
+<e
+  onInvalid={[Function]}
+  onSubmit={[Function]}
+  onValid={[Function]}
+>
+  <form
+    className="form"
+    onSubmit={[Function]}
+  >
+    <n
+      label="input"
+      name="input"
+      validate={[Function]}
+    >
+      <div
+        className="form-field"
+      >
+        <label
+          className="field-label"
+          htmlFor="input"
+        >
+          <span
+            className="required"
+          />
+          <span
+            className="label"
+          >
+            input
+          </span>
+        </label>
+        <div
+          className="field-input"
+        >
+          <e
+            api={
+              Object {
+                "addField": [Function],
+                "changeField": [Function],
+                "getErrors": [Function],
+                "getTouched": [Function],
+                "getValues": [Function],
+                "removeField": [Function],
+                "setValue": [Function],
+              }
+            }
+            changeFieldValue={[Function]}
+            label="input"
+            name="input"
+            validate={[Function]}
+          >
+            <input
+              autoComplete="off"
+              className="input"
+              id="input"
+              onChange={[Function]}
+              onFocus={[Function]}
+              type="text"
+              value=""
+            />
+          </e>
+        </div>
+      </div>
+    </n>
+  </form>
+</e>
+`;
+
+exports[`form onvalid oninvalid method 2`] = `
+<e
+  onInvalid={[Function]}
+  onSubmit={[Function]}
+  onValid={[Function]}
+>
+  <form
+    className="form"
+    onSubmit={[Function]}
+  >
+    <n
+      label="input"
+      name="input"
+      validate={[Function]}
+    >
+      <div
+        className="form-field"
+      >
+        <label
+          className="field-label"
+          htmlFor="input"
+        >
+          <span
+            className="required"
+          />
+          <span
+            className="label"
+          >
+            input
+          </span>
+        </label>
+        <div
+          className="field-input"
+        >
+          <e
+            api={
+              Object {
+                "addField": [Function],
+                "changeField": [Function],
+                "getErrors": [Function],
+                "getTouched": [Function],
+                "getValues": [Function],
+                "removeField": [Function],
+                "setValue": [Function],
+              }
+            }
+            changeFieldValue={[Function]}
+            label="input"
+            name="input"
+            validate={[Function]}
+            value="012345"
+          >
+            <input
+              autoComplete="off"
+              className="input"
+              id="input"
+              onChange={[Function]}
+              onFocus={[Function]}
+              type="text"
+              value="012345"
+            />
+          </e>
+        </div>
+        <e
+          name="input"
+        />
+      </div>
+    </n>
+  </form>
+</e>
+`;
+
+exports[`form submit 1`] = `
+<e
+  onSubmit={[Function]}
+>
+  <form
+    className="form"
+    onSubmit={[Function]}
+  >
+    <n
+      label="input"
+      name="input"
+      validate={[Function]}
+    >
+      <div
+        className="form-field"
+      >
+        <label
+          className="field-label"
+          htmlFor="input"
+        >
+          <span
+            className="required"
+          />
+          <span
+            className="label"
+          >
+            input
+          </span>
+        </label>
+        <div
+          className="field-input"
+        >
+          <e
+            api={
+              Object {
+                "addField": [Function],
+                "changeField": [Function],
+                "getErrors": [Function],
+                "getTouched": [Function],
+                "getValues": [Function],
+                "removeField": [Function],
+                "setValue": [Function],
+              }
+            }
+            changeFieldValue={[Function]}
+            label="input"
+            name="input"
+            validate={[Function]}
+          >
+            <input
+              autoComplete="off"
+              className="input"
+              id="input"
+              onChange={[Function]}
+              onFocus={[Function]}
+              type="text"
+              value=""
+            />
+          </e>
+        </div>
+      </div>
+    </n>
+  </form>
+</e>
+`;
+
+exports[`form submit 2`] = `
+<e
+  onSubmit={[Function]}
+>
+  <form
+    className="form"
+    onSubmit={[Function]}
+  >
+    <n
+      label="input"
+      name="input"
+      validate={[Function]}
+    >
+      <div
+        className="form-field"
+      >
+        <label
+          className="field-label"
+          htmlFor="input"
+        >
+          <span
+            className="required"
+          />
+          <span
+            className="label"
+          >
+            input
+          </span>
+        </label>
+        <div
+          className="field-input"
+        >
+          <e
+            api={
+              Object {
+                "addField": [Function],
+                "changeField": [Function],
+                "getErrors": [Function],
+                "getTouched": [Function],
+                "getValues": [Function],
+                "removeField": [Function],
+                "setValue": [Function],
+              }
+            }
+            changeFieldValue={[Function]}
+            label="input"
+            name="input"
+            validate={[Function]}
+            value="012345"
+          >
+            <input
+              autoComplete="off"
+              className="input"
+              id="input"
+              onChange={[Function]}
+              onFocus={[Function]}
+              type="text"
+              value="012345"
+            />
+          </e>
+        </div>
+        <e
+          name="input"
+        />
+      </div>
+    </n>
+  </form>
+</e>
+`;

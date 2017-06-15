@@ -1,5 +1,4 @@
 import React from 'react';
-import { mount } from 'enzyme';
 import { Form, Input, RadioGroup, CheckboxGroup, Select } from '../form';
 import { defaultRequiredMessage } from '../src/constants';
 
@@ -12,9 +11,13 @@ test('show required message after touched', () => {
                 required />
         </Form>
     );
+    expect(component).toMatchSnapshot();
+
     component.find('#input').simulate('change', { target: { value: '' } });
     let text = component.find('.form').childAt(0).find('.validation-message').text();
     expect(text).toEqual(defaultRequiredMessage);
+    
+    expect(component).toMatchSnapshot();
 });
 
 test('show custom required message', () => {
@@ -28,9 +31,13 @@ test('show custom required message', () => {
                 requiredMessage={requiredMessage} />
         </Form>
     );
+    expect(component).toMatchSnapshot();
+
     component.find('#input').simulate('change', { target: { value: '' } });
     let text = component.find('.form').childAt(0).find('.validation-message').text();
     expect(text).toEqual(requiredMessage);
+
+    expect(component).toMatchSnapshot();
 });
 
 test('show required message after form submit', () => {
@@ -42,8 +49,12 @@ test('show required message after form submit', () => {
                 required />
         </Form>
     );
+    expect(component).toMatchSnapshot();
+
     component.find('.form').simulate('submit');
     let text = component.find('.form').childAt(0).find('.validation-message').text();
     expect(text).toEqual(defaultRequiredMessage);
+
+    expect(component).toMatchSnapshot();
 });
 

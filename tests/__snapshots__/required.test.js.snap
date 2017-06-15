@@ -1,0 +1,442 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`show custom required message 1`] = `
+<e
+  onSubmit={[Function]}
+>
+  <form
+    className="form"
+    onSubmit={[Function]}
+  >
+    <n
+      label="input"
+      name="input"
+      required={true}
+      requiredMessage="please input this field"
+    >
+      <div
+        className="form-field"
+      >
+        <label
+          className="field-label"
+          htmlFor="input"
+        >
+          <span
+            className="required"
+          >
+            *
+          </span>
+          <span
+            className="label"
+          >
+            input
+          </span>
+        </label>
+        <div
+          className="field-input"
+        >
+          <e
+            api={
+              Object {
+                "addField": [Function],
+                "changeField": [Function],
+                "getErrors": [Function],
+                "getTouched": [Function],
+                "getValues": [Function],
+                "removeField": [Function],
+                "setValue": [Function],
+              }
+            }
+            changeFieldValue={[Function]}
+            label="input"
+            name="input"
+            required={true}
+            requiredMessage="please input this field"
+          >
+            <input
+              autoComplete="off"
+              className="input"
+              id="input"
+              onChange={[Function]}
+              onFocus={[Function]}
+              type="text"
+              value=""
+            />
+          </e>
+        </div>
+      </div>
+    </n>
+  </form>
+</e>
+`;
+
+exports[`show custom required message 2`] = `
+<e
+  onSubmit={[Function]}
+>
+  <form
+    className="form"
+    onSubmit={[Function]}
+  >
+    <n
+      label="input"
+      name="input"
+      required={true}
+      requiredMessage="please input this field"
+    >
+      <div
+        className="form-field"
+      >
+        <label
+          className="field-label"
+          htmlFor="input"
+        >
+          <span
+            className="required"
+          >
+            *
+          </span>
+          <span
+            className="label"
+          >
+            input
+          </span>
+        </label>
+        <div
+          className="field-input"
+        >
+          <e
+            api={
+              Object {
+                "addField": [Function],
+                "changeField": [Function],
+                "getErrors": [Function],
+                "getTouched": [Function],
+                "getValues": [Function],
+                "removeField": [Function],
+                "setValue": [Function],
+              }
+            }
+            changeFieldValue={[Function]}
+            label="input"
+            name="input"
+            required={true}
+            requiredMessage="please input this field"
+            value=""
+          >
+            <input
+              autoComplete="off"
+              className="input"
+              id="input"
+              onChange={[Function]}
+              onFocus={[Function]}
+              type="text"
+              value=""
+            />
+          </e>
+        </div>
+        <e
+          name="input"
+        >
+          <span
+            className="validation-message"
+          >
+            please input this field
+          </span>
+        </e>
+      </div>
+    </n>
+  </form>
+</e>
+`;
+
+exports[`show required message after form submit 1`] = `
+<e
+  onSubmit={[Function]}
+>
+  <form
+    className="form"
+    onSubmit={[Function]}
+  >
+    <n
+      label="input"
+      name="input"
+      required={true}
+    >
+      <div
+        className="form-field"
+      >
+        <label
+          className="field-label"
+          htmlFor="input"
+        >
+          <span
+            className="required"
+          >
+            *
+          </span>
+          <span
+            className="label"
+          >
+            input
+          </span>
+        </label>
+        <div
+          className="field-input"
+        >
+          <e
+            api={
+              Object {
+                "addField": [Function],
+                "changeField": [Function],
+                "getErrors": [Function],
+                "getTouched": [Function],
+                "getValues": [Function],
+                "removeField": [Function],
+                "setValue": [Function],
+              }
+            }
+            changeFieldValue={[Function]}
+            label="input"
+            name="input"
+            required={true}
+          >
+            <input
+              autoComplete="off"
+              className="input"
+              id="input"
+              onChange={[Function]}
+              onFocus={[Function]}
+              type="text"
+              value=""
+            />
+          </e>
+        </div>
+      </div>
+    </n>
+  </form>
+</e>
+`;
+
+exports[`show required message after form submit 2`] = `
+<e
+  onSubmit={[Function]}
+>
+  <form
+    className="form"
+    onSubmit={[Function]}
+  >
+    <n
+      label="input"
+      name="input"
+      required={true}
+    >
+      <div
+        className="form-field"
+      >
+        <label
+          className="field-label"
+          htmlFor="input"
+        >
+          <span
+            className="required"
+          >
+            *
+          </span>
+          <span
+            className="label"
+          >
+            input
+          </span>
+        </label>
+        <div
+          className="field-input"
+        >
+          <e
+            api={
+              Object {
+                "addField": [Function],
+                "changeField": [Function],
+                "getErrors": [Function],
+                "getTouched": [Function],
+                "getValues": [Function],
+                "removeField": [Function],
+                "setValue": [Function],
+              }
+            }
+            changeFieldValue={[Function]}
+            label="input"
+            name="input"
+            required={true}
+          >
+            <input
+              autoComplete="off"
+              className="input"
+              id="input"
+              onChange={[Function]}
+              onFocus={[Function]}
+              type="text"
+              value=""
+            />
+          </e>
+        </div>
+        <e
+          name="input"
+        >
+          <span
+            className="validation-message"
+          >
+            this field is required
+          </span>
+        </e>
+      </div>
+    </n>
+  </form>
+</e>
+`;
+
+exports[`show required message after touched 1`] = `
+<e
+  onSubmit={[Function]}
+>
+  <form
+    className="form"
+    onSubmit={[Function]}
+  >
+    <n
+      label="input"
+      name="input"
+      required={true}
+    >
+      <div
+        className="form-field"
+      >
+        <label
+          className="field-label"
+          htmlFor="input"
+        >
+          <span
+            className="required"
+          >
+            *
+          </span>
+          <span
+            className="label"
+          >
+            input
+          </span>
+        </label>
+        <div
+          className="field-input"
+        >
+          <e
+            api={
+              Object {
+                "addField": [Function],
+                "changeField": [Function],
+                "getErrors": [Function],
+                "getTouched": [Function],
+                "getValues": [Function],
+                "removeField": [Function],
+                "setValue": [Function],
+              }
+            }
+            changeFieldValue={[Function]}
+            label="input"
+            name="input"
+            required={true}
+          >
+            <input
+              autoComplete="off"
+              className="input"
+              id="input"
+              onChange={[Function]}
+              onFocus={[Function]}
+              type="text"
+              value=""
+            />
+          </e>
+        </div>
+      </div>
+    </n>
+  </form>
+</e>
+`;
+
+exports[`show required message after touched 2`] = `
+<e
+  onSubmit={[Function]}
+>
+  <form
+    className="form"
+    onSubmit={[Function]}
+  >
+    <n
+      label="input"
+      name="input"
+      required={true}
+    >
+      <div
+        className="form-field"
+      >
+        <label
+          className="field-label"
+          htmlFor="input"
+        >
+          <span
+            className="required"
+          >
+            *
+          </span>
+          <span
+            className="label"
+          >
+            input
+          </span>
+        </label>
+        <div
+          className="field-input"
+        >
+          <e
+            api={
+              Object {
+                "addField": [Function],
+                "changeField": [Function],
+                "getErrors": [Function],
+                "getTouched": [Function],
+                "getValues": [Function],
+                "removeField": [Function],
+                "setValue": [Function],
+              }
+            }
+            changeFieldValue={[Function]}
+            label="input"
+            name="input"
+            required={true}
+            value=""
+          >
+            <input
+              autoComplete="off"
+              className="input"
+              id="input"
+              onChange={[Function]}
+              onFocus={[Function]}
+              type="text"
+              value=""
+            />
+          </e>
+        </div>
+        <e
+          name="input"
+        >
+          <span
+            className="validation-message"
+          >
+            this field is required
+          </span>
+        </e>
+      </div>
+    </n>
+  </form>
+</e>
+`;
