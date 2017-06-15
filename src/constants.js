@@ -1,2 +1,2 @@
-export const defaultRequiredMessage = 'this field is required';
+export const defaultRequiredMessage = 'This field is required.';
 export const NO_ERROR = null;
