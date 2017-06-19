@@ -689,7 +689,7 @@ var Form = (function (_super) {
                 return value.length === 0;
             }
             else {
-                return !value;
+                return value === undefined;
             }
         }
     };

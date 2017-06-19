@@ -90,7 +90,7 @@ export default class Form extends React.Component<FormProps, State> {
                 return value.length === 0;
             }
             else {
-                return !value;
+                return value === undefined;
             }
         }
     }
