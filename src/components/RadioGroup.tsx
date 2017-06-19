@@ -18,6 +18,7 @@ class RadioGroup extends React.Component<RadioGroupProps, any> {
                     <label key={option.value} className="radio">
                         <input
                             name={option.name}
+                            className="radio-input"
                             type="radio"
                             checked={option.value === value}
                             onChange={() => {
