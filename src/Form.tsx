@@ -89,8 +89,11 @@ export default class Form extends React.Component<FormProps, State> {
             if (Array.isArray(value)) {
                 return value.length === 0;
             }
-            else {
+            if (typeof value === 'number') {
                 return value === undefined;
+            }
+            else {
+                return !value;
             }
         }
     }

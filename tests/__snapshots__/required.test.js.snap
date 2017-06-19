@@ -286,7 +286,7 @@ exports[`show required message after form submit 2`] = `
           <span
             className="validation-message"
           >
-            this field is required
+            This field is required.
           </span>
         </e>
       </div>
@@ -432,7 +432,7 @@ exports[`show required message after touched 2`] = `
           <span
             className="validation-message"
           >
-            this field is required
+            This field is required.
           </span>
         </e>
       </div>
