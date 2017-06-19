@@ -20,10 +20,12 @@ class FormExample extends React.Component {
     render() {
         return (
             <div>
-                <Form className="form" onSubmit={this.onSubmit}>
+                <Form onSubmit={this.onSubmit}>
                     <Input
                         name="input"
                         label="input"
+                        required
+                        value={this.state.input}
                         onChange={this.onChange} />
                     <RadioGroup
                         name="radio"
@@ -35,6 +37,7 @@ class FormExample extends React.Component {
                         }, {
                             label: 'blue', value: 'blue'
                         }]}
+                        required
                         onChange={this.onChange} />
                     <CheckboxGroup
                         name="checkbox"
@@ -44,6 +47,7 @@ class FormExample extends React.Component {
                         }, {
                             label: 'banana', value: 'banana'
                         }]}
+                        required
                         onChange={this.onChange} />
                     <Select
                         name="select"
@@ -53,6 +57,7 @@ class FormExample extends React.Component {
                         }, {
                             label: 'banana', value: 'banana'
                         }]}
+                        required
                         onChange={this.onChange} />
                     <button type="submit">submit</button>
                 </Form>

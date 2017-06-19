@@ -10,3 +10,8 @@ main {
 .form-field {
     margin: 20px 0;
 }
+
+.validation-message {
+    font-size: smaller;
+    color: #f04134;
+}
