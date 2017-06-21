@@ -19,10 +19,10 @@ class CheckboxGroup extends React.Component<CheckboxGroupProps, any> {
                 {options.map((option) => {
                     const checked = value.indexOf(option.value) >= 0;
                     return (
-                        <label key={option.value} className="checkbox">
-                            {option.label}
+                        <label key={option.value} className={`checkbox${checked ? ' checked' : ''}`}>
                             <input
                                 name={option.name}
+                                className="checkbox-input"
                                 type="checkbox"
                                 checked={checked}
                                 onChange={() => {
@@ -33,6 +33,7 @@ class CheckboxGroup extends React.Component<CheckboxGroupProps, any> {
                                         changeFieldValue([...value, option.value]);
                                     }
                                 }} />
+                            {option.label}
                         </label>
                     );
                 }

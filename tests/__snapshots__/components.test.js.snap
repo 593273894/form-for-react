@@ -246,22 +246,24 @@ exports[`form component change 1`] = `
               <label
                 className="checkbox"
               >
-                apple
                 <input
                   checked={false}
+                  className="checkbox-input"
                   onChange={[Function]}
                   type="checkbox"
                 />
+                apple
               </label>
               <label
                 className="checkbox"
               >
-                banana
                 <input
                   checked={false}
+                  className="checkbox-input"
                   onChange={[Function]}
                   type="checkbox"
                 />
+                banana
               </label>
             </div>
           </CheckboxGroup>
@@ -617,22 +619,24 @@ exports[`form component change 2`] = `
               <label
                 className="checkbox"
               >
-                apple
                 <input
                   checked={false}
+                  className="checkbox-input"
                   onChange={[Function]}
                   type="checkbox"
                 />
+                apple
               </label>
               <label
                 className="checkbox"
               >
-                banana
                 <input
                   checked={false}
+                  className="checkbox-input"
                   onChange={[Function]}
                   type="checkbox"
                 />
+                banana
               </label>
             </div>
           </CheckboxGroup>
@@ -983,22 +987,24 @@ exports[`form submit 1`] = `
               <label
                 className="checkbox"
               >
-                apple
                 <input
                   checked={false}
+                  className="checkbox-input"
                   onChange={[Function]}
                   type="checkbox"
                 />
+                apple
               </label>
               <label
                 className="checkbox"
               >
-                banana
                 <input
                   checked={false}
+                  className="checkbox-input"
                   onChange={[Function]}
                   type="checkbox"
                 />
+                banana
               </label>
             </div>
           </CheckboxGroup>
@@ -1352,24 +1358,26 @@ exports[`form submit 2`] = `
               id="checkbox"
             >
               <label
-                className="checkbox"
+                className="checkbox checked"
               >
-                apple
                 <input
                   checked={true}
+                  className="checkbox-input"
                   onChange={[Function]}
                   type="checkbox"
                 />
+                apple
               </label>
               <label
                 className="checkbox"
               >
-                banana
                 <input
                   checked={false}
+                  className="checkbox-input"
                   onChange={[Function]}
                   type="checkbox"
                 />
+                banana
               </label>
             </div>
           </CheckboxGroup>

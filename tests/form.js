@@ -984,16 +984,16 @@ var CheckboxGroup = (function (_super) {
         var _a = this.props, _b = _a.value, value = _b === void 0 ? emptyArray : _b, options = _a.options, changeFieldValue = _a.changeFieldValue, name = _a.name;
         return (__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "checkbox-group", id: name }, options.map(function (option) {
             var checked = value.indexOf(option.value) >= 0;
-            return (__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("label", { key: option.value, className: "checkbox" },
-                option.label,
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { name: option.name, type: "checkbox", checked: checked, onChange: function () {
+            return (__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("label", { key: option.value, className: "checkbox" + (checked ? ' checked' : '') },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { name: option.name, className: "checkbox-input", type: "checkbox", checked: checked, onChange: function () {
                         if (checked) {
                             changeFieldValue(value.filter(function (item) { return item !== option.value; }));
                         }
                         else {
                             changeFieldValue(value.concat([option.value]));
                         }
-                    } })));
+                    } }),
+                option.label));
         })));
     };
     return CheckboxGroup;
