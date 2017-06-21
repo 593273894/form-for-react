@@ -142,6 +142,7 @@ exports[`form component change 1`] = `
               >
                 <input
                   checked={false}
+                  className="radio-input"
                   onChange={[Function]}
                   type="radio"
                 />
@@ -152,6 +153,7 @@ exports[`form component change 1`] = `
               >
                 <input
                   checked={false}
+                  className="radio-input"
                   onChange={[Function]}
                   type="radio"
                 />
@@ -162,6 +164,7 @@ exports[`form component change 1`] = `
               >
                 <input
                   checked={false}
+                  className="radio-input"
                   onChange={[Function]}
                   type="radio"
                 />
@@ -506,6 +509,7 @@ exports[`form component change 2`] = `
               >
                 <input
                   checked={false}
+                  className="radio-input"
                   onChange={[Function]}
                   type="radio"
                 />
@@ -516,6 +520,7 @@ exports[`form component change 2`] = `
               >
                 <input
                   checked={true}
+                  className="radio-input"
                   onChange={[Function]}
                   type="radio"
                 />
@@ -526,6 +531,7 @@ exports[`form component change 2`] = `
               >
                 <input
                   checked={false}
+                  className="radio-input"
                   onChange={[Function]}
                   type="radio"
                 />
@@ -874,6 +880,7 @@ exports[`form submit 1`] = `
               >
                 <input
                   checked={false}
+                  className="radio-input"
                   onChange={[Function]}
                   type="radio"
                 />
@@ -884,6 +891,7 @@ exports[`form submit 1`] = `
               >
                 <input
                   checked={false}
+                  className="radio-input"
                   onChange={[Function]}
                   type="radio"
                 />
@@ -894,6 +902,7 @@ exports[`form submit 1`] = `
               >
                 <input
                   checked={false}
+                  className="radio-input"
                   onChange={[Function]}
                   type="radio"
                 />
@@ -1234,6 +1243,7 @@ exports[`form submit 2`] = `
               >
                 <input
                   checked={true}
+                  className="radio-input"
                   onChange={[Function]}
                   type="radio"
                 />
@@ -1244,6 +1254,7 @@ exports[`form submit 2`] = `
               >
                 <input
                   checked={false}
+                  className="radio-input"
                   onChange={[Function]}
                   type="radio"
                 />
@@ -1254,6 +1265,7 @@ exports[`form submit 2`] = `
               >
                 <input
                   checked={false}
+                  className="radio-input"
                   onChange={[Function]}
                   type="radio"
                 />
