@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { Form, Input, RadioGroup, CheckboxGroup, Select } from '../form';
+import { Form, Input, RadioGroup, CheckboxGroup, Select } from './form';
 
 const errorMessage = 'too long';
 const validate = (value, values) => {

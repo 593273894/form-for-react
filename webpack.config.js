@@ -1,13 +1,15 @@
 const webpack = require('webpack');
 const path = require('path');
 
+const env = process.env.NODE_ENV;
+
 module.exports = {
     entry: {
         form: path.resolve(__dirname, './src/index.tsx')
     },
     output: {
         path: path.resolve(__dirname, './'),
-        filename: 'form.js',
+        filename: env === 'production' ? 'form.js' : './tests/form.js',
         library: 'form-for-react',
         libraryTarget: "umd",
     },

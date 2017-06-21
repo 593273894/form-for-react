@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`show custom required message 1`] = `
-<e
+<Form
   onSubmit={[Function]}
 >
   <form
     className="form"
     onSubmit={[Function]}
   >
-    <n
+    <FormField
       label="input"
       name="input"
       required={true}
@@ -35,7 +35,7 @@ exports[`show custom required message 1`] = `
         <div
           className="field-input"
         >
-          <e
+          <Input
             api={
               Object {
                 "addField": [Function],
@@ -62,23 +62,23 @@ exports[`show custom required message 1`] = `
               type="text"
               value=""
             />
-          </e>
+          </Input>
         </div>
       </div>
-    </n>
+    </FormField>
   </form>
-</e>
+</Form>
 `;
 
 exports[`show custom required message 2`] = `
-<e
+<Form
   onSubmit={[Function]}
 >
   <form
     className="form"
     onSubmit={[Function]}
   >
-    <n
+    <FormField
       label="input"
       name="input"
       required={true}
@@ -105,7 +105,7 @@ exports[`show custom required message 2`] = `
         <div
           className="field-input"
         >
-          <e
+          <Input
             api={
               Object {
                 "addField": [Function],
@@ -133,9 +133,9 @@ exports[`show custom required message 2`] = `
               type="text"
               value=""
             />
-          </e>
+          </Input>
         </div>
-        <e
+        <FormError
           name="input"
         >
           <span
@@ -143,22 +143,22 @@ exports[`show custom required message 2`] = `
           >
             please input this field
           </span>
-        </e>
+        </FormError>
       </div>
-    </n>
+    </FormField>
   </form>
-</e>
+</Form>
 `;
 
 exports[`show required message after form submit 1`] = `
-<e
+<Form
   onSubmit={[Function]}
 >
   <form
     className="form"
     onSubmit={[Function]}
   >
-    <n
+    <FormField
       label="input"
       name="input"
       required={true}
@@ -184,7 +184,7 @@ exports[`show required message after form submit 1`] = `
         <div
           className="field-input"
         >
-          <e
+          <Input
             api={
               Object {
                 "addField": [Function],
@@ -210,23 +210,23 @@ exports[`show required message after form submit 1`] = `
               type="text"
               value=""
             />
-          </e>
+          </Input>
         </div>
       </div>
-    </n>
+    </FormField>
   </form>
-</e>
+</Form>
 `;
 
 exports[`show required message after form submit 2`] = `
-<e
+<Form
   onSubmit={[Function]}
 >
   <form
     className="form"
     onSubmit={[Function]}
   >
-    <n
+    <FormField
       label="input"
       name="input"
       required={true}
@@ -252,7 +252,7 @@ exports[`show required message after form submit 2`] = `
         <div
           className="field-input"
         >
-          <e
+          <Input
             api={
               Object {
                 "addField": [Function],
@@ -278,9 +278,9 @@ exports[`show required message after form submit 2`] = `
               type="text"
               value=""
             />
-          </e>
+          </Input>
         </div>
-        <e
+        <FormError
           name="input"
         >
           <span
@@ -288,22 +288,22 @@ exports[`show required message after form submit 2`] = `
           >
             This field is required.
           </span>
-        </e>
+        </FormError>
       </div>
-    </n>
+    </FormField>
   </form>
-</e>
+</Form>
 `;
 
 exports[`show required message after touched 1`] = `
-<e
+<Form
   onSubmit={[Function]}
 >
   <form
     className="form"
     onSubmit={[Function]}
   >
-    <n
+    <FormField
       label="input"
       name="input"
       required={true}
@@ -329,7 +329,7 @@ exports[`show required message after touched 1`] = `
         <div
           className="field-input"
         >
-          <e
+          <Input
             api={
               Object {
                 "addField": [Function],
@@ -355,23 +355,23 @@ exports[`show required message after touched 1`] = `
               type="text"
               value=""
             />
-          </e>
+          </Input>
         </div>
       </div>
-    </n>
+    </FormField>
   </form>
-</e>
+</Form>
 `;
 
 exports[`show required message after touched 2`] = `
-<e
+<Form
   onSubmit={[Function]}
 >
   <form
     className="form"
     onSubmit={[Function]}
   >
-    <n
+    <FormField
       label="input"
       name="input"
       required={true}
@@ -397,7 +397,7 @@ exports[`show required message after touched 2`] = `
         <div
           className="field-input"
         >
-          <e
+          <Input
             api={
               Object {
                 "addField": [Function],
@@ -424,9 +424,9 @@ exports[`show required message after touched 2`] = `
               type="text"
               value=""
             />
-          </e>
+          </Input>
         </div>
-        <e
+        <FormError
           name="input"
         >
           <span
@@ -434,9 +434,9 @@ exports[`show required message after touched 2`] = `
           >
             This field is required.
           </span>
-        </e>
+        </FormError>
       </div>
-    </n>
+    </FormField>
   </form>
-</e>
+</Form>
 `;

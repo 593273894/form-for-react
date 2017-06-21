@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, Input, RadioGroup, CheckboxGroup, Select } from '../form';
+import { Form, Input, RadioGroup, CheckboxGroup, Select } from './form';
 import { defaultRequiredMessage } from '../src/constants';
 
 test('show required message after touched', () => {

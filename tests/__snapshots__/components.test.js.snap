@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`form component change 1`] = `
-<e
+<Form
   onSubmit={[Function]}
 >
   <form
     className="form"
     onSubmit={[Function]}
   >
-    <n
+    <FormField
       label="input"
       name="input"
       onChange={[Function]}
@@ -32,7 +32,7 @@ exports[`form component change 1`] = `
         <div
           className="field-input"
         >
-          <e
+          <Input
             api={
               Object {
                 "addField": [Function],
@@ -57,11 +57,11 @@ exports[`form component change 1`] = `
               type="text"
               value=""
             />
-          </e>
+          </Input>
         </div>
       </div>
-    </n>
-    <n
+    </FormField>
+    <FormField
       label="radio"
       name="radio"
       onChange={[Function]}
@@ -101,7 +101,7 @@ exports[`form component change 1`] = `
         <div
           className="field-input"
         >
-          <e
+          <RadioGroup
             api={
               Object {
                 "addField": [Function],
@@ -171,11 +171,11 @@ exports[`form component change 1`] = `
                 blue
               </label>
             </div>
-          </e>
+          </RadioGroup>
         </div>
       </div>
-    </n>
-    <n
+    </FormField>
+    <FormField
       label="checkbox"
       name="checkbox"
       onChange={[Function]}
@@ -211,7 +211,7 @@ exports[`form component change 1`] = `
         <div
           className="field-input"
         >
-          <e
+          <CheckboxGroup
             api={
               Object {
                 "addField": [Function],
@@ -264,11 +264,11 @@ exports[`form component change 1`] = `
                 />
               </label>
             </div>
-          </e>
+          </CheckboxGroup>
         </div>
       </div>
-    </n>
-    <n
+    </FormField>
+    <FormField
       label="select"
       name="select"
       onChange={[Function]}
@@ -304,7 +304,7 @@ exports[`form component change 1`] = `
         <div
           className="field-input"
         >
-          <e
+          <Select
             api={
               Object {
                 "addField": [Function],
@@ -354,23 +354,23 @@ exports[`form component change 1`] = `
                 dog
               </option>
             </select>
-          </e>
+          </Select>
         </div>
       </div>
-    </n>
+    </FormField>
   </form>
-</e>
+</Form>
 `;
 
 exports[`form component change 2`] = `
-<e
+<Form
   onSubmit={[Function]}
 >
   <form
     className="form"
     onSubmit={[Function]}
   >
-    <n
+    <FormField
       label="input"
       name="input"
       onChange={[Function]}
@@ -394,7 +394,7 @@ exports[`form component change 2`] = `
         <div
           className="field-input"
         >
-          <e
+          <Input
             api={
               Object {
                 "addField": [Function],
@@ -420,14 +420,14 @@ exports[`form component change 2`] = `
               type="text"
               value="apple"
             />
-          </e>
+          </Input>
         </div>
-        <e
+        <FormError
           name="input"
         />
       </div>
-    </n>
-    <n
+    </FormField>
+    <FormField
       label="radio"
       name="radio"
       onChange={[Function]}
@@ -467,7 +467,7 @@ exports[`form component change 2`] = `
         <div
           className="field-input"
         >
-          <e
+          <RadioGroup
             api={
               Object {
                 "addField": [Function],
@@ -516,7 +516,7 @@ exports[`form component change 2`] = `
                 red
               </label>
               <label
-                className="radio"
+                className="radio checked"
               >
                 <input
                   checked={true}
@@ -538,14 +538,14 @@ exports[`form component change 2`] = `
                 blue
               </label>
             </div>
-          </e>
+          </RadioGroup>
         </div>
-        <e
+        <FormError
           name="radio"
         />
       </div>
-    </n>
-    <n
+    </FormField>
+    <FormField
       label="checkbox"
       name="checkbox"
       onChange={[Function]}
@@ -581,7 +581,7 @@ exports[`form component change 2`] = `
         <div
           className="field-input"
         >
-          <e
+          <CheckboxGroup
             api={
               Object {
                 "addField": [Function],
@@ -635,14 +635,14 @@ exports[`form component change 2`] = `
                 />
               </label>
             </div>
-          </e>
+          </CheckboxGroup>
         </div>
-        <e
+        <FormError
           name="checkbox"
         />
       </div>
-    </n>
-    <n
+    </FormField>
+    <FormField
       label="select"
       name="select"
       onChange={[Function]}
@@ -678,7 +678,7 @@ exports[`form component change 2`] = `
         <div
           className="field-input"
         >
-          <e
+          <Select
             api={
               Object {
                 "addField": [Function],
@@ -729,26 +729,26 @@ exports[`form component change 2`] = `
                 dog
               </option>
             </select>
-          </e>
+          </Select>
         </div>
-        <e
+        <FormError
           name="select"
         />
       </div>
-    </n>
+    </FormField>
   </form>
-</e>
+</Form>
 `;
 
 exports[`form submit 1`] = `
-<e
+<Form
   onSubmit={[Function]}
 >
   <form
     className="form"
     onSubmit={[Function]}
   >
-    <n
+    <FormField
       label="input"
       name="input"
     >
@@ -771,7 +771,7 @@ exports[`form submit 1`] = `
         <div
           className="field-input"
         >
-          <e
+          <Input
             api={
               Object {
                 "addField": [Function],
@@ -796,11 +796,11 @@ exports[`form submit 1`] = `
               type="text"
               value=""
             />
-          </e>
+          </Input>
         </div>
       </div>
-    </n>
-    <n
+    </FormField>
+    <FormField
       label="radio"
       name="radio"
       options={
@@ -839,7 +839,7 @@ exports[`form submit 1`] = `
         <div
           className="field-input"
         >
-          <e
+          <RadioGroup
             api={
               Object {
                 "addField": [Function],
@@ -909,11 +909,11 @@ exports[`form submit 1`] = `
                 blue
               </label>
             </div>
-          </e>
+          </RadioGroup>
         </div>
       </div>
-    </n>
-    <n
+    </FormField>
+    <FormField
       label="checkbox"
       name="checkbox"
       options={
@@ -948,7 +948,7 @@ exports[`form submit 1`] = `
         <div
           className="field-input"
         >
-          <e
+          <CheckboxGroup
             api={
               Object {
                 "addField": [Function],
@@ -1001,11 +1001,11 @@ exports[`form submit 1`] = `
                 />
               </label>
             </div>
-          </e>
+          </CheckboxGroup>
         </div>
       </div>
-    </n>
-    <n
+    </FormField>
+    <FormField
       label="select"
       name="select"
       options={
@@ -1040,7 +1040,7 @@ exports[`form submit 1`] = `
         <div
           className="field-input"
         >
-          <e
+          <Select
             api={
               Object {
                 "addField": [Function],
@@ -1090,23 +1090,23 @@ exports[`form submit 1`] = `
                 dog
               </option>
             </select>
-          </e>
+          </Select>
         </div>
       </div>
-    </n>
+    </FormField>
   </form>
-</e>
+</Form>
 `;
 
 exports[`form submit 2`] = `
-<e
+<Form
   onSubmit={[Function]}
 >
   <form
     className="form"
     onSubmit={[Function]}
   >
-    <n
+    <FormField
       label="input"
       name="input"
     >
@@ -1129,7 +1129,7 @@ exports[`form submit 2`] = `
         <div
           className="field-input"
         >
-          <e
+          <Input
             api={
               Object {
                 "addField": [Function],
@@ -1155,14 +1155,14 @@ exports[`form submit 2`] = `
               type="text"
               value="apple"
             />
-          </e>
+          </Input>
         </div>
-        <e
+        <FormError
           name="input"
         />
       </div>
-    </n>
-    <n
+    </FormField>
+    <FormField
       label="radio"
       name="radio"
       options={
@@ -1201,7 +1201,7 @@ exports[`form submit 2`] = `
         <div
           className="field-input"
         >
-          <e
+          <RadioGroup
             api={
               Object {
                 "addField": [Function],
@@ -1239,7 +1239,7 @@ exports[`form submit 2`] = `
               id="radio"
             >
               <label
-                className="radio"
+                className="radio checked"
               >
                 <input
                   checked={true}
@@ -1272,14 +1272,14 @@ exports[`form submit 2`] = `
                 blue
               </label>
             </div>
-          </e>
+          </RadioGroup>
         </div>
-        <e
+        <FormError
           name="radio"
         />
       </div>
-    </n>
-    <n
+    </FormField>
+    <FormField
       label="checkbox"
       name="checkbox"
       options={
@@ -1314,7 +1314,7 @@ exports[`form submit 2`] = `
         <div
           className="field-input"
         >
-          <e
+          <CheckboxGroup
             api={
               Object {
                 "addField": [Function],
@@ -1372,14 +1372,14 @@ exports[`form submit 2`] = `
                 />
               </label>
             </div>
-          </e>
+          </CheckboxGroup>
         </div>
-        <e
+        <FormError
           name="checkbox"
         />
       </div>
-    </n>
-    <n
+    </FormField>
+    <FormField
       label="select"
       name="select"
       options={
@@ -1414,7 +1414,7 @@ exports[`form submit 2`] = `
         <div
           className="field-input"
         >
-          <e
+          <Select
             api={
               Object {
                 "addField": [Function],
@@ -1465,13 +1465,13 @@ exports[`form submit 2`] = `
                 dog
               </option>
             </select>
-          </e>
+          </Select>
         </div>
-        <e
+        <FormError
           name="select"
         />
       </div>
-    </n>
+    </FormField>
   </form>
-</e>
+</Form>
 `;

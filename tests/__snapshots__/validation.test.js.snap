@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`custom validation 1`] = `
-<e
+<Form
   onSubmit={[Function]}
 >
   <form
     className="form"
     onSubmit={[Function]}
   >
-    <n
+    <FormField
       label="input"
       name="input"
       validate={[Function]}
@@ -32,7 +32,7 @@ exports[`custom validation 1`] = `
         <div
           className="field-input"
         >
-          <e
+          <Input
             api={
               Object {
                 "addField": [Function],
@@ -58,23 +58,23 @@ exports[`custom validation 1`] = `
               type="text"
               value=""
             />
-          </e>
+          </Input>
         </div>
       </div>
-    </n>
+    </FormField>
   </form>
-</e>
+</Form>
 `;
 
 exports[`custom validation 2`] = `
-<e
+<Form
   onSubmit={[Function]}
 >
   <form
     className="form"
     onSubmit={[Function]}
   >
-    <n
+    <FormField
       label="input"
       name="input"
       validate={[Function]}
@@ -98,7 +98,7 @@ exports[`custom validation 2`] = `
         <div
           className="field-input"
         >
-          <e
+          <Input
             api={
               Object {
                 "addField": [Function],
@@ -125,19 +125,19 @@ exports[`custom validation 2`] = `
               type="text"
               value="123"
             />
-          </e>
+          </Input>
         </div>
-        <e
+        <FormError
           name="input"
         />
       </div>
-    </n>
+    </FormField>
   </form>
-</e>
+</Form>
 `;
 
 exports[`form onvalid oninvalid method 1`] = `
-<e
+<Form
   onInvalid={[Function]}
   onSubmit={[Function]}
   onValid={[Function]}
@@ -146,7 +146,7 @@ exports[`form onvalid oninvalid method 1`] = `
     className="form"
     onSubmit={[Function]}
   >
-    <n
+    <FormField
       label="input"
       name="input"
       validate={[Function]}
@@ -170,7 +170,7 @@ exports[`form onvalid oninvalid method 1`] = `
         <div
           className="field-input"
         >
-          <e
+          <Input
             api={
               Object {
                 "addField": [Function],
@@ -196,16 +196,16 @@ exports[`form onvalid oninvalid method 1`] = `
               type="text"
               value=""
             />
-          </e>
+          </Input>
         </div>
       </div>
-    </n>
+    </FormField>
   </form>
-</e>
+</Form>
 `;
 
 exports[`form onvalid oninvalid method 2`] = `
-<e
+<Form
   onInvalid={[Function]}
   onSubmit={[Function]}
   onValid={[Function]}
@@ -214,7 +214,7 @@ exports[`form onvalid oninvalid method 2`] = `
     className="form"
     onSubmit={[Function]}
   >
-    <n
+    <FormField
       label="input"
       name="input"
       validate={[Function]}
@@ -238,7 +238,7 @@ exports[`form onvalid oninvalid method 2`] = `
         <div
           className="field-input"
         >
-          <e
+          <Input
             api={
               Object {
                 "addField": [Function],
@@ -265,26 +265,26 @@ exports[`form onvalid oninvalid method 2`] = `
               type="text"
               value="012345"
             />
-          </e>
+          </Input>
         </div>
-        <e
+        <FormError
           name="input"
         />
       </div>
-    </n>
+    </FormField>
   </form>
-</e>
+</Form>
 `;
 
 exports[`form submit 1`] = `
-<e
+<Form
   onSubmit={[Function]}
 >
   <form
     className="form"
     onSubmit={[Function]}
   >
-    <n
+    <FormField
       label="input"
       name="input"
       validate={[Function]}
@@ -308,7 +308,7 @@ exports[`form submit 1`] = `
         <div
           className="field-input"
         >
-          <e
+          <Input
             api={
               Object {
                 "addField": [Function],
@@ -334,23 +334,23 @@ exports[`form submit 1`] = `
               type="text"
               value=""
             />
-          </e>
+          </Input>
         </div>
       </div>
-    </n>
+    </FormField>
   </form>
-</e>
+</Form>
 `;
 
 exports[`form submit 2`] = `
-<e
+<Form
   onSubmit={[Function]}
 >
   <form
     className="form"
     onSubmit={[Function]}
   >
-    <n
+    <FormField
       label="input"
       name="input"
       validate={[Function]}
@@ -374,7 +374,7 @@ exports[`form submit 2`] = `
         <div
           className="field-input"
         >
-          <e
+          <Input
             api={
               Object {
                 "addField": [Function],
@@ -401,13 +401,13 @@ exports[`form submit 2`] = `
               type="text"
               value="012345"
             />
-          </e>
+          </Input>
         </div>
-        <e
+        <FormError
           name="input"
         />
       </div>
-    </n>
+    </FormField>
   </form>
-</e>
+</Form>
 `;
