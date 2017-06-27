@@ -82,7 +82,7 @@ main {
     height: 14px;
 }
 
-.radio-input::after {
+.radio::before {
     /*radio/checkbox inner*/
     content: " ";
     display: inline-block;
@@ -100,7 +100,7 @@ main {
     transition: all .15s cubic-bezier(.78, .14, .15, .86);
 }
 
-.radio.checked .radio-input::after {
+.radio.checked::before {
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1);
@@ -108,7 +108,7 @@ main {
     transition: all .15s cubic-bezier(.78, .14, .15, .86);
 }
 
-.checkbox-input::after {
+.checkbox::before {
     /*checkbox white tick*/
     content: " ";
     cursor: pointer;
