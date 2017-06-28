@@ -48,18 +48,12 @@ exports[`show custom required message 1`] = `
               }
             }
             changeFieldValue={[Function]}
-            label="input"
             name="input"
-            required={true}
-            requiredMessage="please input this field"
           >
             <input
-              autoComplete="off"
               className="input"
               id="input"
               onChange={[Function]}
-              onFocus={[Function]}
-              type="text"
               value=""
             />
           </Input>
@@ -118,19 +112,13 @@ exports[`show custom required message 2`] = `
               }
             }
             changeFieldValue={[Function]}
-            label="input"
             name="input"
-            required={true}
-            requiredMessage="please input this field"
             value=""
           >
             <input
-              autoComplete="off"
               className="input"
               id="input"
               onChange={[Function]}
-              onFocus={[Function]}
-              type="text"
               value=""
             />
           </Input>
@@ -197,17 +185,12 @@ exports[`show required message after form submit 1`] = `
               }
             }
             changeFieldValue={[Function]}
-            label="input"
             name="input"
-            required={true}
           >
             <input
-              autoComplete="off"
               className="input"
               id="input"
               onChange={[Function]}
-              onFocus={[Function]}
-              type="text"
               value=""
             />
           </Input>
@@ -265,17 +248,12 @@ exports[`show required message after form submit 2`] = `
               }
             }
             changeFieldValue={[Function]}
-            label="input"
             name="input"
-            required={true}
           >
             <input
-              autoComplete="off"
               className="input"
               id="input"
               onChange={[Function]}
-              onFocus={[Function]}
-              type="text"
               value=""
             />
           </Input>
@@ -342,17 +320,12 @@ exports[`show required message after touched 1`] = `
               }
             }
             changeFieldValue={[Function]}
-            label="input"
             name="input"
-            required={true}
           >
             <input
-              autoComplete="off"
               className="input"
               id="input"
               onChange={[Function]}
-              onFocus={[Function]}
-              type="text"
               value=""
             />
           </Input>
@@ -410,18 +383,13 @@ exports[`show required message after touched 2`] = `
               }
             }
             changeFieldValue={[Function]}
-            label="input"
             name="input"
-            required={true}
             value=""
           >
             <input
-              autoComplete="off"
               className="input"
               id="input"
               onChange={[Function]}
-              onFocus={[Function]}
-              type="text"
               value=""
             />
           </Input>

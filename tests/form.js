@@ -194,10 +194,13 @@ var createFromField = function (Input) {
             };
             FormField.prototype.renderInput = function () {
                 var _this = this;
-                var _a = this.props, name = _a.name, label = _a.label, onChange = _a.onChange, value = _a.value, disabled = _a.disabled, rest = __rest(_a, ["name", "label", "onChange", "value", "disabled"]);
+                var _a = this.props, name = _a.name, onChange = _a.onChange, value = _a.value, // props for input component
+                label = _a.label, fieldClassName = _a.fieldClassName, fieldStyle = _a.fieldStyle, disabled = _a.disabled, validate = _a.validate, requiredMessage = _a.requiredMessage, required = _a.required, help = _a.help, // props for field, don't pass to input component
+                rest = __rest(_a, ["name", "onChange", "value", "label", "fieldClassName", "fieldStyle", "disabled", "validate", "requiredMessage", "required", "help"]) // user's props
+                ;
                 var api = this.context.api;
                 return (__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "field-input" },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Input, __assign({ api: this.context.api, name: name, label: label, value: this.state.value, disabled: disabled, changeFieldValue: function (value) {
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Input, __assign({ api: this.context.api, name: name, value: this.state.value, changeFieldValue: function (value) {
                             onChange && onChange(name, value);
                             api.setValue(name, value);
                             _this.setState({
@@ -1019,20 +1022,36 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __assign = (this && this.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
+var __rest = (this && this.__rest) || function (s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) if (e.indexOf(p[i]) < 0)
+            t[p[i]] = s[p[i]];
+    return t;
+};
 
 
 var emptyString = '';
-function noop() { }
 var Input = (function (_super) {
     __extends(Input, _super);
     function Input() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Input.prototype.render = function () {
-        var _a = this.props, name = _a.name, _b = _a.value, value = _b === void 0 ? emptyString : _b, changeFieldValue = _a.changeFieldValue, placeholder = _a.placeholder, _c = _a.type, type = _c === void 0 ? 'text' : _c, _d = _a.onFocus, onFocus = _d === void 0 ? noop : _d, disabled = _a.disabled, _e = _a.autoComplete, autoComplete = _e === void 0 ? 'off' : _e, style = _a.style;
-        return (__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { id: name, type: type, className: "input", value: value, onChange: function (e) {
+        var _a = this.props, name = _a.name, _b = _a.value, value = _b === void 0 ? emptyString : _b, api = _a.api, changeFieldValue = _a.changeFieldValue, rest = __rest(_a, ["name", "value", "api", "changeFieldValue"]);
+        return (__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", __assign({ id: name, className: "input", value: value, onChange: function (e) {
                 changeFieldValue(e.target.value);
-            }, placeholder: placeholder, disabled: disabled, onFocus: onFocus, autoComplete: autoComplete, style: style }));
+            } }, rest)));
     };
     return Input;
 }(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component));

@@ -45,16 +45,12 @@ exports[`form component change 1`] = `
               }
             }
             changeFieldValue={[Function]}
-            label="input"
             name="input"
           >
             <input
-              autoComplete="off"
               className="input"
               id="input"
               onChange={[Function]}
-              onFocus={[Function]}
-              type="text"
               value=""
             />
           </Input>
@@ -114,7 +110,6 @@ exports[`form component change 1`] = `
               }
             }
             changeFieldValue={[Function]}
-            label="radio"
             name="radio"
             options={
               Array [
@@ -224,7 +219,6 @@ exports[`form component change 1`] = `
               }
             }
             changeFieldValue={[Function]}
-            label="checkbox"
             name="checkbox"
             options={
               Array [
@@ -319,7 +313,6 @@ exports[`form component change 1`] = `
               }
             }
             changeFieldValue={[Function]}
-            label="select"
             name="select"
             options={
               Array [
@@ -409,17 +402,13 @@ exports[`form component change 2`] = `
               }
             }
             changeFieldValue={[Function]}
-            label="input"
             name="input"
             value="apple"
           >
             <input
-              autoComplete="off"
               className="input"
               id="input"
               onChange={[Function]}
-              onFocus={[Function]}
-              type="text"
               value="apple"
             />
           </Input>
@@ -482,7 +471,6 @@ exports[`form component change 2`] = `
               }
             }
             changeFieldValue={[Function]}
-            label="radio"
             name="radio"
             options={
               Array [
@@ -596,7 +584,6 @@ exports[`form component change 2`] = `
               }
             }
             changeFieldValue={[Function]}
-            label="checkbox"
             name="checkbox"
             options={
               Array [
@@ -695,7 +682,6 @@ exports[`form component change 2`] = `
               }
             }
             changeFieldValue={[Function]}
-            label="select"
             name="select"
             options={
               Array [
@@ -788,16 +774,12 @@ exports[`form submit 1`] = `
               }
             }
             changeFieldValue={[Function]}
-            label="input"
             name="input"
           >
             <input
-              autoComplete="off"
               className="input"
               id="input"
               onChange={[Function]}
-              onFocus={[Function]}
-              type="text"
               value=""
             />
           </Input>
@@ -856,7 +838,6 @@ exports[`form submit 1`] = `
               }
             }
             changeFieldValue={[Function]}
-            label="radio"
             name="radio"
             options={
               Array [
@@ -965,7 +946,6 @@ exports[`form submit 1`] = `
               }
             }
             changeFieldValue={[Function]}
-            label="checkbox"
             name="checkbox"
             options={
               Array [
@@ -1059,7 +1039,6 @@ exports[`form submit 1`] = `
               }
             }
             changeFieldValue={[Function]}
-            label="select"
             name="select"
             options={
               Array [
@@ -1148,17 +1127,13 @@ exports[`form submit 2`] = `
               }
             }
             changeFieldValue={[Function]}
-            label="input"
             name="input"
             value="apple"
           >
             <input
-              autoComplete="off"
               className="input"
               id="input"
               onChange={[Function]}
-              onFocus={[Function]}
-              type="text"
               value="apple"
             />
           </Input>
@@ -1220,7 +1195,6 @@ exports[`form submit 2`] = `
               }
             }
             changeFieldValue={[Function]}
-            label="radio"
             name="radio"
             options={
               Array [
@@ -1333,7 +1307,6 @@ exports[`form submit 2`] = `
               }
             }
             changeFieldValue={[Function]}
-            label="checkbox"
             name="checkbox"
             options={
               Array [
@@ -1435,7 +1408,6 @@ exports[`form submit 2`] = `
               }
             }
             changeFieldValue={[Function]}
-            label="select"
             name="select"
             options={
               Array [

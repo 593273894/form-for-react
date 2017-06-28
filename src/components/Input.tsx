@@ -11,25 +11,21 @@ export interface InputProps extends FormInputProps {
 }
 
 const emptyString = '';
-function noop() { }
 
 class Input extends React.Component<InputProps, any> {
     render() {
-        const { name, value = emptyString, changeFieldValue, placeholder, type = 'text', onFocus = noop, disabled, autoComplete = 'off', style } = this.props;
+        const { name, value = emptyString, api,
+            changeFieldValue,
+            ...rest } = this.props;
         return (
             <input
                 id={name}
-                type={type}
                 className="input"
                 value={value}
                 onChange={e => {
                     changeFieldValue(e.target.value);
                 }}
-                placeholder={placeholder}
-                disabled={disabled}
-                onFocus={onFocus}
-                autoComplete={autoComplete}
-                style={style}
+                {...rest}
             />
         );
     }

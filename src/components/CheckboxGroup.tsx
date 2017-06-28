@@ -36,8 +36,7 @@ class CheckboxGroup extends React.Component<CheckboxGroupProps, any> {
                             {option.label}
                         </label>
                     );
-                }
-                )}
+                })}
             </div>
         );
     }

@@ -29,8 +29,7 @@ class RadioGroup extends React.Component<RadioGroupProps, any> {
                             {option.label}
                         </label>
                     );
-                }
-                )}
+                })}
             </div>
         );
     }

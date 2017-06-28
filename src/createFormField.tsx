@@ -89,15 +89,17 @@ const createFromField = (Input) => {
             }
         }
         renderInput() {
-            const { name, label, onChange, value, disabled, ...rest } = this.props;
+            const { name, onChange, value, // props for input component
+                label, fieldClassName, fieldStyle, disabled, validate, requiredMessage, required, help, // props for field, don't pass to input component
+                ...rest // user's props
+            } = this.props;
             const { api } = this.context;
             return (
                 <div className="field-input">
                     <Input
                         api={this.context.api}
-                        name={name} label={label}
+                        name={name}
                         value={this.state.value}
-                        disabled={disabled}
                         changeFieldValue={value => {
                             onChange && onChange(name, value);
                             api.setValue(name, value);

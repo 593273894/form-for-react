@@ -45,17 +45,12 @@ exports[`custom validation 1`] = `
               }
             }
             changeFieldValue={[Function]}
-            label="input"
             name="input"
-            validate={[Function]}
           >
             <input
-              autoComplete="off"
               className="input"
               id="input"
               onChange={[Function]}
-              onFocus={[Function]}
-              type="text"
               value=""
             />
           </Input>
@@ -111,18 +106,13 @@ exports[`custom validation 2`] = `
               }
             }
             changeFieldValue={[Function]}
-            label="input"
             name="input"
-            validate={[Function]}
             value="123"
           >
             <input
-              autoComplete="off"
               className="input"
               id="input"
               onChange={[Function]}
-              onFocus={[Function]}
-              type="text"
               value="123"
             />
           </Input>
@@ -183,17 +173,12 @@ exports[`form onvalid oninvalid method 1`] = `
               }
             }
             changeFieldValue={[Function]}
-            label="input"
             name="input"
-            validate={[Function]}
           >
             <input
-              autoComplete="off"
               className="input"
               id="input"
               onChange={[Function]}
-              onFocus={[Function]}
-              type="text"
               value=""
             />
           </Input>
@@ -251,18 +236,13 @@ exports[`form onvalid oninvalid method 2`] = `
               }
             }
             changeFieldValue={[Function]}
-            label="input"
             name="input"
-            validate={[Function]}
             value="012345"
           >
             <input
-              autoComplete="off"
               className="input"
               id="input"
               onChange={[Function]}
-              onFocus={[Function]}
-              type="text"
               value="012345"
             />
           </Input>
@@ -321,17 +301,12 @@ exports[`form submit 1`] = `
               }
             }
             changeFieldValue={[Function]}
-            label="input"
             name="input"
-            validate={[Function]}
           >
             <input
-              autoComplete="off"
               className="input"
               id="input"
               onChange={[Function]}
-              onFocus={[Function]}
-              type="text"
               value=""
             />
           </Input>
@@ -387,18 +362,13 @@ exports[`form submit 2`] = `
               }
             }
             changeFieldValue={[Function]}
-            label="input"
             name="input"
-            validate={[Function]}
             value="012345"
           >
             <input
-              autoComplete="off"
               className="input"
               id="input"
               onChange={[Function]}
-              onFocus={[Function]}
-              type="text"
               value="012345"
             />
           </Input>
