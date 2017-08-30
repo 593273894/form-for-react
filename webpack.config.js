@@ -20,6 +20,12 @@ module.exports = {
             commonjs: 'react',
             amd: 'react',
         },
+        classnames: {
+            root: 'classnames',
+            commonjs2: 'classnames',
+            commonjs: 'classnames',
+            amd: 'classnames',
+        }
     },
     resolve: {
         extensions: [".webpack.js", ".web.js", ".ts", ".tsx", ".js"]
