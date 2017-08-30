@@ -710,11 +710,11 @@ var FormError = (function (_super) {
         var error = api.getErrors()[name];
         return (error !== __WEBPACK_IMPORTED_MODULE_3__constants__["b" /* NO_ERROR */] ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span", { className: __WEBPACK_IMPORTED_MODULE_2_classnames___default()('validation-message', className) }, error) : null);
     };
+    FormError.contextTypes = {
+        api: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object
+    };
     return FormError;
 }(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component));
-FormError.contextTypes = {
-    api: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object
-};
 /* harmony default export */ __webpack_exports__["a"] = (FormError);
 
 
@@ -747,45 +747,43 @@ var emptyFunction = __webpack_require__(4);
 var warning = emptyFunction;
 
 if (process.env.NODE_ENV !== 'production') {
-  (function () {
-    var printWarning = function printWarning(format) {
-      for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-        args[_key - 1] = arguments[_key];
+  var printWarning = function printWarning(format) {
+    for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+      args[_key - 1] = arguments[_key];
+    }
+
+    var argIndex = 0;
+    var message = 'Warning: ' + format.replace(/%s/g, function () {
+      return args[argIndex++];
+    });
+    if (typeof console !== 'undefined') {
+      console.error(message);
+    }
+    try {
+      // --- Welcome to debugging React ---
+      // This error was thrown as a convenience so that you can use this stack
+      // to find the callsite that caused this warning to fire.
+      throw new Error(message);
+    } catch (x) {}
+  };
+
+  warning = function warning(condition, format) {
+    if (format === undefined) {
+      throw new Error('`warning(condition, format, ...args)` requires a warning ' + 'message argument');
+    }
+
+    if (format.indexOf('Failed Composite propType: ') === 0) {
+      return; // Ignore CompositeComponent proptype check.
+    }
+
+    if (!condition) {
+      for (var _len2 = arguments.length, args = Array(_len2 > 2 ? _len2 - 2 : 0), _key2 = 2; _key2 < _len2; _key2++) {
+        args[_key2 - 2] = arguments[_key2];
       }
 
-      var argIndex = 0;
-      var message = 'Warning: ' + format.replace(/%s/g, function () {
-        return args[argIndex++];
-      });
-      if (typeof console !== 'undefined') {
-        console.error(message);
-      }
-      try {
-        // --- Welcome to debugging React ---
-        // This error was thrown as a convenience so that you can use this stack
-        // to find the callsite that caused this warning to fire.
-        throw new Error(message);
-      } catch (x) {}
-    };
-
-    warning = function warning(condition, format) {
-      if (format === undefined) {
-        throw new Error('`warning(condition, format, ...args)` requires a warning ' + 'message argument');
-      }
-
-      if (format.indexOf('Failed Composite propType: ') === 0) {
-        return; // Ignore CompositeComponent proptype check.
-      }
-
-      if (!condition) {
-        for (var _len2 = arguments.length, args = Array(_len2 > 2 ? _len2 - 2 : 0), _key2 = 2; _key2 < _len2; _key2++) {
-          args[_key2 - 2] = arguments[_key2];
-        }
-
-        printWarning.apply(undefined, [format].concat(args));
-      }
-    };
-  })();
+      printWarning.apply(undefined, [format].concat(args));
+    }
+  };
 }
 
 module.exports = warning;
@@ -813,6 +811,23 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __assign = (this && this.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
+var __rest = (this && this.__rest) || function (s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) if (e.indexOf(p[i]) < 0)
+            t[p[i]] = s[p[i]];
+    return t;
+};
 
 
 
@@ -943,18 +958,18 @@ var Form = (function (_super) {
     };
     Form.prototype.render = function () {
         var _this = this;
-        var className = this.props.className;
-        return (__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("form", { className: __WEBPACK_IMPORTED_MODULE_2_classnames___default()('form', className), onSubmit: function (e) { return _this.onSubmit(e); } }, this.props.children));
+        var _a = this.props, className = _a.className, onInvalid = _a.onInvalid, onSubmit = _a.onSubmit, onValid = _a.onValid, children = _a.children, rest = __rest(_a, ["className", "onInvalid", "onSubmit", "onValid", "children"]);
+        return (__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("form", __assign({ className: __WEBPACK_IMPORTED_MODULE_2_classnames___default()('form', className), onSubmit: function (e) { return _this.onSubmit(e); } }, rest), this.props.children));
+    };
+    Form.defaultProps = {
+        onSubmit: noop,
+    };
+    Form.childContextTypes = {
+        api: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object
     };
     return Form;
 }(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component));
 /* harmony default export */ __webpack_exports__["a"] = (Form);
-Form.defaultProps = {
-    onSubmit: noop,
-};
-Form.childContextTypes = {
-    api: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object
-};
 
 
 /***/ }),
