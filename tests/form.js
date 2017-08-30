@@ -220,8 +220,10 @@ var createFromField = function (Input) {
                 return (touched && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__FormError__["a" /* default */], { name: name }));
             };
             FormField.prototype.render = function () {
-                var _a = this.props, fieldClassName = _a.fieldClassName, fieldStyle = _a.fieldStyle, disabled = _a.disabled;
-                return (__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: __WEBPACK_IMPORTED_MODULE_2_classnames___default()('form-field', fieldClassName, { disabled: disabled }), style: fieldStyle },
+                var _a = this.props, fieldClassName = _a.fieldClassName, fieldStyle = _a.fieldStyle, disabled = _a.disabled, name = _a.name;
+                var api = this.context.api;
+                var hasError = !!api.getErrors()[name];
+                return (__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: __WEBPACK_IMPORTED_MODULE_2_classnames___default()('form-field', fieldClassName, { disabled: disabled, 'has-error': hasError }), style: fieldStyle },
                     this.renderLabel(),
                     this.renderInput(),
                     this.renderHelp(),

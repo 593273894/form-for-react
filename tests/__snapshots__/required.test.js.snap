@@ -79,7 +79,7 @@ exports[`show custom required message 2`] = `
       requiredMessage="please input this field"
     >
       <div
-        className="form-field"
+        className="form-field has-error"
       >
         <label
           className="field-label"
@@ -215,7 +215,7 @@ exports[`show required message after form submit 2`] = `
       required={true}
     >
       <div
-        className="form-field"
+        className="form-field has-error"
       >
         <label
           className="field-label"
@@ -350,7 +350,7 @@ exports[`show required message after touched 2`] = `
       required={true}
     >
       <div
-        className="form-field"
+        className="form-field has-error"
       >
         <label
           className="field-label"
