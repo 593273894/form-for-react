@@ -62,16 +62,11 @@ const createFromField = (Input) => {
             }
         }
         isEqual(value1, value2) {
-            if (typeof value1 === 'string' || typeof value1 === 'undefined' || typeof value1 === 'boolean' ||
-                typeof value1 === 'number') {
-                return value1 === value2;
-            }
-            else if (Array.isArray(value1)) {
+            if (Array.isArray(value1)) {
                 return value1.every(item => value2.indexOf(item) >= 0) && value2.every(item => value1.indexOf(item) >= 0);
             }
             else {
-                console.error('value should be a string, number, array or boolean');
-                return true;
+                return value1 === value2;
             }
         }
         renderLabel() {
