@@ -138,7 +138,7 @@ exports[`show custom required message 2`] = `
 </Form>
 `;
 
-exports[`show required message after form submit 1`] = `
+exports[`show required message, and set a 'has-error' className after form submit 1`] = `
 <Form
   onSubmit={[Function]}
 >
@@ -201,7 +201,7 @@ exports[`show required message after form submit 1`] = `
 </Form>
 `;
 
-exports[`show required message after form submit 2`] = `
+exports[`show required message, and set a 'has-error' className after form submit 2`] = `
 <Form
   onSubmit={[Function]}
 >
@@ -273,7 +273,7 @@ exports[`show required message after form submit 2`] = `
 </Form>
 `;
 
-exports[`show required message after touched 1`] = `
+exports[`show required message, and set a 'has-error' className after touched 1`] = `
 <Form
   onSubmit={[Function]}
 >
@@ -336,7 +336,7 @@ exports[`show required message after touched 1`] = `
 </Form>
 `;
 
-exports[`show required message after touched 2`] = `
+exports[`show required message, and set a 'has-error' className after touched 2`] = `
 <Form
   onSubmit={[Function]}
 >
