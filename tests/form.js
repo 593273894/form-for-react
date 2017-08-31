@@ -217,7 +217,9 @@ var createFromField = function (Input) {
             FormField.prototype.render = function () {
                 var _a = this.props, fieldClassName = _a.fieldClassName, fieldStyle = _a.fieldStyle, disabled = _a.disabled, name = _a.name;
                 var api = this.context.api;
-                var hasError = !!api.getErrors()[name];
+                var touched = api.getTouched();
+                touched = touched[name] || touched.__allTouched;
+                var hasError = api.getErrors()[name] && touched;
                 return (__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: __WEBPACK_IMPORTED_MODULE_2_classnames___default()('form-field', fieldClassName, { disabled: disabled, 'has-error': hasError }), style: fieldStyle },
                     this.renderLabel(),
                     this.renderInput(),
