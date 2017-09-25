@@ -31,7 +31,7 @@ const createFromField = (Input) => {
             api: PropTypes.object
         };
         context: FormContext;
-        componentDidMount() {
+        componentWillMount() {
             this.context.api.addField({
                 name: this.props.name,
                 validate: this.props.validate,

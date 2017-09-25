@@ -138,7 +138,7 @@ var createFromField = function (Input) {
                 };
                 return _this;
             }
-            FormField.prototype.componentDidMount = function () {
+            FormField.prototype.componentWillMount = function () {
                 this.context.api.addField({
                     name: this.props.name,
                     validate: this.props.validate,
