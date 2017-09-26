@@ -97,7 +97,7 @@ const createFromField = (Input) => {
                         value={this.state.value}
                         changeFieldValue={value => {
                             onChange && onChange(name, value);
-                            api.setValue(name, value);
+                            api.setValue(name, value, true);
                             this.setState({
                                 value: value
                             });

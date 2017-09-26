@@ -9,6 +9,7 @@ interface State {
 }
 
 export interface FormProps {
+    onChange?: Function;
     onSubmit?: Function;
     onValid?: Function;
     onInvalid?: Function;
@@ -97,7 +98,7 @@ export default class Form extends React.Component<FormProps, State> {
             }
         }
     }
-    setValue(name, value) {
+    setValue(name, value, triggerFormOnChange = false) {
         this.values[name] = value;
         this.touched[name] = true;
         const errors = this.validateFields();
@@ -112,6 +113,7 @@ export default class Form extends React.Component<FormProps, State> {
             errors
         });
         noerror ? this.onValid() : this.onInvalid();
+        triggerFormOnChange && this.onchange(name, value);
     }
     getValues() {
         return this.values;
@@ -121,6 +123,9 @@ export default class Form extends React.Component<FormProps, State> {
     }
     getTouched() {
         return this.touched;
+    }
+    onchange(name, value) {
+        this.props.onChange && this.props.onChange(name, value);
     }
     onValid() {
         this.props.onValid && this.props.onValid();
@@ -148,7 +153,7 @@ export default class Form extends React.Component<FormProps, State> {
     }
 
     render() {
-        const { className, onInvalid, onSubmit, onValid, children, ...rest } = this.props;
+        const { className, onChange, onSubmit, onInvalid, onValid, children, ...rest } = this.props;
         return (
             <form className={classnames('form', className)} onSubmit={e => this.onSubmit(e)} {...rest} >
                 {this.props.children}

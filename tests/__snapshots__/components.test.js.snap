@@ -1,5 +1,729 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`form change 1`] = `
+<Form
+  onChange={[Function]}
+  onSubmit={[Function]}
+>
+  <form
+    className="form"
+    onSubmit={[Function]}
+  >
+    <FormField
+      label="input"
+      name="input"
+    >
+      <div
+        className="form-field"
+      >
+        <label
+          className="field-label"
+          htmlFor="input"
+        >
+          <span
+            className="required"
+          />
+          <span
+            className="label"
+          >
+            input
+          </span>
+        </label>
+        <div
+          className="field-input"
+        >
+          <Input
+            api={
+              Object {
+                "addField": [Function],
+                "changeField": [Function],
+                "getErrors": [Function],
+                "getTouched": [Function],
+                "getValues": [Function],
+                "removeField": [Function],
+                "setValue": [Function],
+              }
+            }
+            changeFieldValue={[Function]}
+            name="input"
+          >
+            <input
+              className="input"
+              id="input"
+              onChange={[Function]}
+              value=""
+            />
+          </Input>
+        </div>
+      </div>
+    </FormField>
+    <FormField
+      label="radio"
+      name="radio"
+      options={
+        Array [
+          Object {
+            "label": "red",
+            "value": "red",
+          },
+          Object {
+            "label": "yellow",
+            "value": "yellow",
+          },
+          Object {
+            "label": "blue",
+            "value": "blue",
+          },
+        ]
+      }
+    >
+      <div
+        className="form-field"
+      >
+        <label
+          className="field-label"
+          htmlFor="radio"
+        >
+          <span
+            className="required"
+          />
+          <span
+            className="label"
+          >
+            radio
+          </span>
+        </label>
+        <div
+          className="field-input"
+        >
+          <RadioGroup
+            api={
+              Object {
+                "addField": [Function],
+                "changeField": [Function],
+                "getErrors": [Function],
+                "getTouched": [Function],
+                "getValues": [Function],
+                "removeField": [Function],
+                "setValue": [Function],
+              }
+            }
+            changeFieldValue={[Function]}
+            name="radio"
+            options={
+              Array [
+                Object {
+                  "label": "red",
+                  "value": "red",
+                },
+                Object {
+                  "label": "yellow",
+                  "value": "yellow",
+                },
+                Object {
+                  "label": "blue",
+                  "value": "blue",
+                },
+              ]
+            }
+          >
+            <div
+              className="radio-group"
+              id="radio"
+            >
+              <label
+                className="radio"
+              >
+                <input
+                  checked={false}
+                  className="radio-input"
+                  onChange={[Function]}
+                  type="radio"
+                />
+                red
+              </label>
+              <label
+                className="radio"
+              >
+                <input
+                  checked={false}
+                  className="radio-input"
+                  onChange={[Function]}
+                  type="radio"
+                />
+                yellow
+              </label>
+              <label
+                className="radio"
+              >
+                <input
+                  checked={false}
+                  className="radio-input"
+                  onChange={[Function]}
+                  type="radio"
+                />
+                blue
+              </label>
+            </div>
+          </RadioGroup>
+        </div>
+      </div>
+    </FormField>
+    <FormField
+      label="checkbox"
+      name="checkbox"
+      options={
+        Array [
+          Object {
+            "label": "apple",
+            "value": "apple",
+          },
+          Object {
+            "label": "banana",
+            "value": "banana",
+          },
+        ]
+      }
+    >
+      <div
+        className="form-field"
+      >
+        <label
+          className="field-label"
+          htmlFor="checkbox"
+        >
+          <span
+            className="required"
+          />
+          <span
+            className="label"
+          >
+            checkbox
+          </span>
+        </label>
+        <div
+          className="field-input"
+        >
+          <CheckboxGroup
+            api={
+              Object {
+                "addField": [Function],
+                "changeField": [Function],
+                "getErrors": [Function],
+                "getTouched": [Function],
+                "getValues": [Function],
+                "removeField": [Function],
+                "setValue": [Function],
+              }
+            }
+            changeFieldValue={[Function]}
+            name="checkbox"
+            options={
+              Array [
+                Object {
+                  "label": "apple",
+                  "value": "apple",
+                },
+                Object {
+                  "label": "banana",
+                  "value": "banana",
+                },
+              ]
+            }
+          >
+            <div
+              className="checkbox-group"
+              id="checkbox"
+            >
+              <label
+                className="checkbox"
+              >
+                <input
+                  checked={false}
+                  className="checkbox-input"
+                  onChange={[Function]}
+                  type="checkbox"
+                />
+                apple
+              </label>
+              <label
+                className="checkbox"
+              >
+                <input
+                  checked={false}
+                  className="checkbox-input"
+                  onChange={[Function]}
+                  type="checkbox"
+                />
+                banana
+              </label>
+            </div>
+          </CheckboxGroup>
+        </div>
+      </div>
+    </FormField>
+    <FormField
+      label="select"
+      name="select"
+      options={
+        Array [
+          Object {
+            "label": "cat",
+            "value": "cat",
+          },
+          Object {
+            "label": "dog",
+            "value": "dog",
+          },
+        ]
+      }
+    >
+      <div
+        className="form-field"
+      >
+        <label
+          className="field-label"
+          htmlFor="select"
+        >
+          <span
+            className="required"
+          />
+          <span
+            className="label"
+          >
+            select
+          </span>
+        </label>
+        <div
+          className="field-input"
+        >
+          <Select
+            api={
+              Object {
+                "addField": [Function],
+                "changeField": [Function],
+                "getErrors": [Function],
+                "getTouched": [Function],
+                "getValues": [Function],
+                "removeField": [Function],
+                "setValue": [Function],
+              }
+            }
+            changeFieldValue={[Function]}
+            name="select"
+            options={
+              Array [
+                Object {
+                  "label": "cat",
+                  "value": "cat",
+                },
+                Object {
+                  "label": "dog",
+                  "value": "dog",
+                },
+              ]
+            }
+          >
+            <select
+              id="select"
+              name="select"
+              onChange={[Function]}
+              value=""
+            >
+              <option
+                value=""
+              >
+                 --- 
+              </option>
+              <option
+                value="cat"
+              >
+                cat
+              </option>
+              <option
+                value="dog"
+              >
+                dog
+              </option>
+            </select>
+          </Select>
+        </div>
+      </div>
+    </FormField>
+  </form>
+</Form>
+`;
+
+exports[`form change 2`] = `
+<Form
+  onChange={[Function]}
+  onSubmit={[Function]}
+>
+  <form
+    className="form"
+    onSubmit={[Function]}
+  >
+    <FormField
+      label="input"
+      name="input"
+    >
+      <div
+        className="form-field"
+      >
+        <label
+          className="field-label"
+          htmlFor="input"
+        >
+          <span
+            className="required"
+          />
+          <span
+            className="label"
+          >
+            input
+          </span>
+        </label>
+        <div
+          className="field-input"
+        >
+          <Input
+            api={
+              Object {
+                "addField": [Function],
+                "changeField": [Function],
+                "getErrors": [Function],
+                "getTouched": [Function],
+                "getValues": [Function],
+                "removeField": [Function],
+                "setValue": [Function],
+              }
+            }
+            changeFieldValue={[Function]}
+            name="input"
+            value="apple"
+          >
+            <input
+              className="input"
+              id="input"
+              onChange={[Function]}
+              value="apple"
+            />
+          </Input>
+        </div>
+        <FormError
+          name="input"
+        />
+      </div>
+    </FormField>
+    <FormField
+      label="radio"
+      name="radio"
+      options={
+        Array [
+          Object {
+            "label": "red",
+            "value": "red",
+          },
+          Object {
+            "label": "yellow",
+            "value": "yellow",
+          },
+          Object {
+            "label": "blue",
+            "value": "blue",
+          },
+        ]
+      }
+    >
+      <div
+        className="form-field"
+      >
+        <label
+          className="field-label"
+          htmlFor="radio"
+        >
+          <span
+            className="required"
+          />
+          <span
+            className="label"
+          >
+            radio
+          </span>
+        </label>
+        <div
+          className="field-input"
+        >
+          <RadioGroup
+            api={
+              Object {
+                "addField": [Function],
+                "changeField": [Function],
+                "getErrors": [Function],
+                "getTouched": [Function],
+                "getValues": [Function],
+                "removeField": [Function],
+                "setValue": [Function],
+              }
+            }
+            changeFieldValue={[Function]}
+            name="radio"
+            options={
+              Array [
+                Object {
+                  "label": "red",
+                  "value": "red",
+                },
+                Object {
+                  "label": "yellow",
+                  "value": "yellow",
+                },
+                Object {
+                  "label": "blue",
+                  "value": "blue",
+                },
+              ]
+            }
+            value="yellow"
+          >
+            <div
+              className="radio-group"
+              id="radio"
+            >
+              <label
+                className="radio"
+              >
+                <input
+                  checked={false}
+                  className="radio-input"
+                  onChange={[Function]}
+                  type="radio"
+                />
+                red
+              </label>
+              <label
+                className="radio checked"
+              >
+                <input
+                  checked={true}
+                  className="radio-input"
+                  onChange={[Function]}
+                  type="radio"
+                />
+                yellow
+              </label>
+              <label
+                className="radio"
+              >
+                <input
+                  checked={false}
+                  className="radio-input"
+                  onChange={[Function]}
+                  type="radio"
+                />
+                blue
+              </label>
+            </div>
+          </RadioGroup>
+        </div>
+        <FormError
+          name="radio"
+        />
+      </div>
+    </FormField>
+    <FormField
+      label="checkbox"
+      name="checkbox"
+      options={
+        Array [
+          Object {
+            "label": "apple",
+            "value": "apple",
+          },
+          Object {
+            "label": "banana",
+            "value": "banana",
+          },
+        ]
+      }
+    >
+      <div
+        className="form-field"
+      >
+        <label
+          className="field-label"
+          htmlFor="checkbox"
+        >
+          <span
+            className="required"
+          />
+          <span
+            className="label"
+          >
+            checkbox
+          </span>
+        </label>
+        <div
+          className="field-input"
+        >
+          <CheckboxGroup
+            api={
+              Object {
+                "addField": [Function],
+                "changeField": [Function],
+                "getErrors": [Function],
+                "getTouched": [Function],
+                "getValues": [Function],
+                "removeField": [Function],
+                "setValue": [Function],
+              }
+            }
+            changeFieldValue={[Function]}
+            name="checkbox"
+            options={
+              Array [
+                Object {
+                  "label": "apple",
+                  "value": "apple",
+                },
+                Object {
+                  "label": "banana",
+                  "value": "banana",
+                },
+              ]
+            }
+            value={Array []}
+          >
+            <div
+              className="checkbox-group"
+              id="checkbox"
+            >
+              <label
+                className="checkbox"
+              >
+                <input
+                  checked={false}
+                  className="checkbox-input"
+                  onChange={[Function]}
+                  type="checkbox"
+                />
+                apple
+              </label>
+              <label
+                className="checkbox"
+              >
+                <input
+                  checked={false}
+                  className="checkbox-input"
+                  onChange={[Function]}
+                  type="checkbox"
+                />
+                banana
+              </label>
+            </div>
+          </CheckboxGroup>
+        </div>
+        <FormError
+          name="checkbox"
+        />
+      </div>
+    </FormField>
+    <FormField
+      label="select"
+      name="select"
+      options={
+        Array [
+          Object {
+            "label": "cat",
+            "value": "cat",
+          },
+          Object {
+            "label": "dog",
+            "value": "dog",
+          },
+        ]
+      }
+    >
+      <div
+        className="form-field"
+      >
+        <label
+          className="field-label"
+          htmlFor="select"
+        >
+          <span
+            className="required"
+          />
+          <span
+            className="label"
+          >
+            select
+          </span>
+        </label>
+        <div
+          className="field-input"
+        >
+          <Select
+            api={
+              Object {
+                "addField": [Function],
+                "changeField": [Function],
+                "getErrors": [Function],
+                "getTouched": [Function],
+                "getValues": [Function],
+                "removeField": [Function],
+                "setValue": [Function],
+              }
+            }
+            changeFieldValue={[Function]}
+            name="select"
+            options={
+              Array [
+                Object {
+                  "label": "cat",
+                  "value": "cat",
+                },
+                Object {
+                  "label": "dog",
+                  "value": "dog",
+                },
+              ]
+            }
+            value="dog"
+          >
+            <select
+              id="select"
+              name="select"
+              onChange={[Function]}
+              value="dog"
+            >
+              <option
+                value=""
+              >
+                 --- 
+              </option>
+              <option
+                value="cat"
+              >
+                cat
+              </option>
+              <option
+                value="dog"
+              >
+                dog
+              </option>
+            </select>
+          </Select>
+        </div>
+        <FormError
+          name="select"
+        />
+      </div>
+    </FormField>
+  </form>
+</Form>
+`;
+
 exports[`form component change 1`] = `
 <Form
   onSubmit={[Function]}

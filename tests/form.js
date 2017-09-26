@@ -197,7 +197,7 @@ var createFromField = function (Input) {
                 return (__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "field-input" },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Input, __assign({ api: this.context.api, name: name, value: this.state.value, changeFieldValue: function (value) {
                             onChange && onChange(name, value);
-                            api.setValue(name, value);
+                            api.setValue(name, value, true);
                             _this.setState({
                                 value: value
                             });
@@ -906,7 +906,8 @@ var Form = (function (_super) {
             }
         }
     };
-    Form.prototype.setValue = function (name, value) {
+    Form.prototype.setValue = function (name, value, triggerFormOnChange) {
+        if (triggerFormOnChange === void 0) { triggerFormOnChange = false; }
         this.values[name] = value;
         this.touched[name] = true;
         var errors = this.validateFields();
@@ -921,6 +922,7 @@ var Form = (function (_super) {
             errors: errors
         });
         noerror ? this.onValid() : this.onInvalid();
+        triggerFormOnChange && this.onchange(name, value);
     };
     Form.prototype.getValues = function () {
         return this.values;
@@ -930,6 +932,9 @@ var Form = (function (_super) {
     };
     Form.prototype.getTouched = function () {
         return this.touched;
+    };
+    Form.prototype.onchange = function (name, value) {
+        this.props.onChange && this.props.onChange(name, value);
     };
     Form.prototype.onValid = function () {
         this.props.onValid && this.props.onValid();
@@ -957,7 +962,7 @@ var Form = (function (_super) {
     };
     Form.prototype.render = function () {
         var _this = this;
-        var _a = this.props, className = _a.className, onInvalid = _a.onInvalid, onSubmit = _a.onSubmit, onValid = _a.onValid, children = _a.children, rest = __rest(_a, ["className", "onInvalid", "onSubmit", "onValid", "children"]);
+        var _a = this.props, className = _a.className, onChange = _a.onChange, onSubmit = _a.onSubmit, onInvalid = _a.onInvalid, onValid = _a.onValid, children = _a.children, rest = __rest(_a, ["className", "onChange", "onSubmit", "onInvalid", "onValid", "children"]);
         return (__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("form", __assign({ className: __WEBPACK_IMPORTED_MODULE_2_classnames___default()('form', className), onSubmit: function (e) { return _this.onSubmit(e); } }, rest), this.props.children));
     };
     Form.defaultProps = {
