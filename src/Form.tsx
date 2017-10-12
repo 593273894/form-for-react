@@ -133,8 +133,8 @@ export default class Form extends React.Component<FormProps, State> {
     onInvalid() {
         this.props.onInvalid && this.props.onInvalid();
     }
-    onSubmit(e) {
-        e.preventDefault();
+    onSubmit(e?: React.FormEvent<HTMLFormElement>) {
+        e && e.preventDefault && e.preventDefault();
         this.touched.__allTouched = true;
         const errors = this.validateFields();
         let noerror = true;
@@ -151,6 +151,7 @@ export default class Form extends React.Component<FormProps, State> {
             errors
         });
     }
+    submit = this.onSubmit;
 
     render() {
         const { className, onChange, onSubmit, onInvalid, onValid, children, ...rest } = this.props;

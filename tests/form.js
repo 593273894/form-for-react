@@ -836,6 +836,7 @@ var Form = (function (_super) {
     __extends(Form, _super);
     function Form(props) {
         var _this = _super.call(this, props) || this;
+        _this.submit = _this.onSubmit;
         _this.state = {
             errors: {}
         };
@@ -943,7 +944,7 @@ var Form = (function (_super) {
         this.props.onInvalid && this.props.onInvalid();
     };
     Form.prototype.onSubmit = function (e) {
-        e.preventDefault();
+        e && e.preventDefault && e.preventDefault();
         this.touched.__allTouched = true;
         var errors = this.validateFields();
         var noerror = true;
