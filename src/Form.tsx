@@ -62,7 +62,7 @@ export default class Form extends React.Component<FormProps, State> {
     }
     removeField(name) {
         delete this.fields[name];
-        this.values[name] = '';
+        this.values[name] = undefined;
     }
     validateFields() {
         let errors = {};

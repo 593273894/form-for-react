@@ -871,7 +871,7 @@ var Form = (function (_super) {
     };
     Form.prototype.removeField = function (name) {
         delete this.fields[name];
-        this.values[name] = '';
+        this.values[name] = undefined;
     };
     Form.prototype.validateFields = function () {
         var errors = {};
