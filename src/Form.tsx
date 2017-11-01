@@ -28,6 +28,7 @@ export default class Form extends React.Component<FormProps, State> {
         };
         this.validates = {};
         this.fields = {};
+        this.mounted = false;
     }
     static defaultProps: FormProps = {
         onSubmit: noop,
@@ -35,6 +36,11 @@ export default class Form extends React.Component<FormProps, State> {
     static childContextTypes = {
         api: PropTypes.object
     };
+    values: {};
+    touched: { __allTouched: Boolean };
+    validates: {};
+    fields: {};
+    mounted: boolean;
     getChildContext() {
         return {
             api: {
@@ -48,10 +54,9 @@ export default class Form extends React.Component<FormProps, State> {
             }
         };
     }
-    values: {};
-    touched: { __allTouched: Boolean };
-    validates: {};
-    fields: {};
+    componentDidMount() {
+        this.mounted = true;
+    }
     addField(field) {
         this.fields[field.name] = field;
         this.values[field.name] = '';
@@ -125,7 +130,7 @@ export default class Form extends React.Component<FormProps, State> {
         return this.touched;
     }
     onchange(name, value) {
-        this.props.onChange && this.props.onChange(name, value);
+        this.mounted && this.props.onChange && this.props.onChange(name, value);
     }
     onValid() {
         this.props.onValid && this.props.onValid();

@@ -846,6 +846,7 @@ var Form = (function (_super) {
         };
         _this.validates = {};
         _this.fields = {};
+        _this.mounted = false;
         return _this;
     }
     Form.prototype.getChildContext = function () {
@@ -860,6 +861,9 @@ var Form = (function (_super) {
                 removeField: this.removeField.bind(this),
             }
         };
+    };
+    Form.prototype.componentDidMount = function () {
+        this.mounted = true;
     };
     Form.prototype.addField = function (field) {
         this.fields[field.name] = field;
@@ -935,7 +939,7 @@ var Form = (function (_super) {
         return this.touched;
     };
     Form.prototype.onchange = function (name, value) {
-        this.props.onChange && this.props.onChange(name, value);
+        this.mounted && this.props.onChange && this.props.onChange(name, value);
     };
     Form.prototype.onValid = function () {
         this.props.onValid && this.props.onValid();
