@@ -36,7 +36,7 @@ const createFromField = (Input) => {
                 name: this.props.name,
                 validate: this.props.validate,
                 required: this.props.required,
-                requiredMessage: this.props.requiredMessage || defaultRequiredMessage
+                requiredMessage: this.props.requiredMessage === undefined ? defaultRequiredMessage : this.props.requiredMessage,
             });
             if (this.props.value !== undefined && this.props.value !== '') {
                 this.context.api.setValue(this.props.name, this.props.value);

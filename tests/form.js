@@ -143,7 +143,7 @@ var createFromField = function (Input) {
                     name: this.props.name,
                     validate: this.props.validate,
                     required: this.props.required,
-                    requiredMessage: this.props.requiredMessage || __WEBPACK_IMPORTED_MODULE_4__constants__["a" /* defaultRequiredMessage */]
+                    requiredMessage: this.props.requiredMessage === undefined ? __WEBPACK_IMPORTED_MODULE_4__constants__["a" /* defaultRequiredMessage */] : this.props.requiredMessage,
                 });
                 if (this.props.value !== undefined && this.props.value !== '') {
                     this.context.api.setValue(this.props.name, this.props.value);
