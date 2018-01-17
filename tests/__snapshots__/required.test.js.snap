@@ -1,5 +1,141 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`required message can be empty string 1`] = `
+<Form
+  onSubmit={[Function]}
+>
+  <form
+    className="form"
+    onSubmit={[Function]}
+  >
+    <FormField
+      label="input"
+      name="input"
+      required={true}
+      requiredMessage=""
+    >
+      <div
+        className="form-field"
+      >
+        <label
+          className="field-label"
+          htmlFor="input"
+        >
+          <span
+            className="required"
+          >
+            *
+          </span>
+          <span
+            className="label"
+          >
+            input
+          </span>
+        </label>
+        <div
+          className="field-input"
+        >
+          <Input
+            api={
+              Object {
+                "addField": [Function],
+                "changeField": [Function],
+                "getErrors": [Function],
+                "getTouched": [Function],
+                "getValues": [Function],
+                "removeField": [Function],
+                "setValue": [Function],
+              }
+            }
+            changeFieldValue={[Function]}
+            name="input"
+          >
+            <input
+              className="input"
+              id="input"
+              onChange={[Function]}
+              value=""
+            />
+          </Input>
+        </div>
+      </div>
+    </FormField>
+  </form>
+</Form>
+`;
+
+exports[`required message can be empty string 2`] = `
+<Form
+  onSubmit={[Function]}
+>
+  <form
+    className="form"
+    onSubmit={[Function]}
+  >
+    <FormField
+      label="input"
+      name="input"
+      required={true}
+      requiredMessage=""
+    >
+      <div
+        className="form-field has-error"
+      >
+        <label
+          className="field-label"
+          htmlFor="input"
+        >
+          <span
+            className="required"
+          >
+            *
+          </span>
+          <span
+            className="label"
+          >
+            input
+          </span>
+        </label>
+        <div
+          className="field-input"
+        >
+          <Input
+            api={
+              Object {
+                "addField": [Function],
+                "changeField": [Function],
+                "getErrors": [Function],
+                "getTouched": [Function],
+                "getValues": [Function],
+                "removeField": [Function],
+                "setValue": [Function],
+              }
+            }
+            changeFieldValue={[Function]}
+            name="input"
+            value=""
+          >
+            <input
+              className="input"
+              id="input"
+              onChange={[Function]}
+              value=""
+            />
+          </Input>
+        </div>
+        <FormError
+          name="input"
+        >
+          <span
+            className="validation-message"
+          />
+        </FormError>
+      </div>
+    </FormField>
+  </form>
+</Form>
+`;
+
 exports[`show custom required message 1`] = `
 <Form
   onSubmit={[Function]}

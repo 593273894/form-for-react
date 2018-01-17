@@ -39,6 +39,32 @@ test('show custom required message', () => {
     let text = component.find('.form').childAt(0).find('.validation-message').text();
     expect(text).toEqual(requiredMessage);
 
+    let hasError = component.find('.form').childAt(0).hasClass('has-error');
+    expect(hasError).toEqual(true);
+
+    expect(component).toMatchSnapshot();
+});
+
+test('required message can be empty string', () => {
+    const requiredMessage = "";
+    const component = mount(
+        <Form>
+            <Input
+                name="input"
+                label="input"
+                required
+                requiredMessage={requiredMessage} />
+        </Form>
+    );
+    expect(component).toMatchSnapshot();
+
+    component.find('#input').simulate('change', { target: { value: '' } });
+    let text = component.find('.form').childAt(0).find('.validation-message').text();
+    expect(text).toEqual(requiredMessage);
+
+    let hasError = component.find('.form').childAt(0).hasClass('has-error');
+    expect(hasError).toEqual(true);
+
     expect(component).toMatchSnapshot();
 });
 

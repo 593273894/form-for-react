@@ -2,7 +2,7 @@ import React from 'react';
 import FormError from './FormError';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import { defaultRequiredMessage } from './constants';
+import { defaultRequiredMessage, NO_ERROR } from './constants';
 export interface FormFieldProps {
     name: string;
     label: string;
@@ -125,7 +125,7 @@ const createFromField = (Input) => {
             const { api } = this.context;
             let touched = api.getTouched();
             touched = touched[name] || touched.__allTouched;
-            const hasError = api.getErrors()[name] && touched;
+            const hasError = api.getErrors()[name] !== NO_ERROR && touched;
             return (
                 <div className={classnames('form-field', fieldClassName, { disabled, 'has-error': hasError })} style={fieldStyle} >
                     {this.renderLabel()}
