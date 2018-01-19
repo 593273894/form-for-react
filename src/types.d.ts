@@ -12,10 +12,16 @@ declare interface ContextApi {
     setValue: Function;
     getValues: () => Object;
     getTouched: Function;
-    addField: Function;
-    changeField: Function;
-    removeField: Function;
+    addField: (field: Field) => void;
+    changeField: (field: Field) => void;
+    removeField: (name: string) => void;
 }
 declare interface FormContext {
     api: ContextApi;
+}
+declare interface Field {
+    name: string;
+    validate: () => null | string;
+    required: boolean;
+    requiredMessage?: string;
 }

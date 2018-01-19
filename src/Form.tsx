@@ -57,11 +57,11 @@ export default class Form extends React.Component<FormProps, State> {
     componentDidMount() {
         this.mounted = true;
     }
-    addField(field) {
+    addField(field: Field) {
         this.fields[field.name] = field;
         this.values[field.name] = '';
     }
-    changeField(field) {
+    changeField(field: Field) {
         this.fields[field.name] = field;
         this.setValue(field.name, this.values[field.name]);
     }
@@ -84,7 +84,7 @@ export default class Form extends React.Component<FormProps, State> {
             else {
                 if (typeof this.fields[name].validate === 'function') {
                     const validateMessage = this.fields[name].validate(this.values[name], this.values);
-                    if (typeof validateMessage !== 'string' || validateMessage !== NO_ERROR) {
+                    if (typeof validateMessage !== 'string' && validateMessage !== NO_ERROR) {
                         console.warn('Expected return value of validate() to be a string for error message ' +
                             'or a null for validate success');
                     }

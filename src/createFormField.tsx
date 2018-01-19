@@ -6,7 +6,7 @@ import { defaultRequiredMessage, NO_ERROR } from './constants';
 export interface FormFieldProps {
     name: string;
     label: string;
-    validate: Function;
+    validate: () => null | string;
     onChange: (name: string, value: any) => any;
     required: boolean;
     value?: string | number;
@@ -50,7 +50,8 @@ const createFromField = (Input) => {
                 this.context.api.changeField({
                     name: nextprops.name,
                     validate: nextprops.validate,
-                    required: nextprops.required
+                    required: nextprops.required,
+                    requiredMessage: nextprops.requiredMessage === undefined ? defaultRequiredMessage : nextprops.requiredMessage,
                 });
             }
             if (!this.isEqual(this.propsValue, nextprops.value)) {

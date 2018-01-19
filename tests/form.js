@@ -157,7 +157,8 @@ var createFromField = function (Input) {
                     this.context.api.changeField({
                         name: nextprops.name,
                         validate: nextprops.validate,
-                        required: nextprops.required
+                        required: nextprops.required,
+                        requiredMessage: nextprops.requiredMessage === undefined ? __WEBPACK_IMPORTED_MODULE_4__constants__["a" /* defaultRequiredMessage */] : nextprops.requiredMessage,
                     });
                 }
                 if (!this.isEqual(this.propsValue, nextprops.value)) {
@@ -892,7 +893,7 @@ var Form = (function (_super) {
             else {
                 if (typeof this.fields[name_1].validate === 'function') {
                     var validateMessage = this.fields[name_1].validate(this.values[name_1], this.values);
-                    if (typeof validateMessage !== 'string' || validateMessage !== __WEBPACK_IMPORTED_MODULE_3__constants__["b" /* NO_ERROR */]) {
+                    if (typeof validateMessage !== 'string' && validateMessage !== __WEBPACK_IMPORTED_MODULE_3__constants__["b" /* NO_ERROR */]) {
                         console.warn('Expected return value of validate() to be a string for error message ' +
                             'or a null for validate success');
                     }
