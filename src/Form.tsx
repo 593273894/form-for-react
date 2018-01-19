@@ -110,7 +110,6 @@ export default class Form extends React.Component<FormProps, State> {
     }
     setValue(name, value, triggerFormOnChange = false) {
         this.values[name] = value;
-        this.touched[name] = true;
         const errors = this.validateFields();
         let noerror = true;
         for (let name in errors) {
@@ -123,7 +122,10 @@ export default class Form extends React.Component<FormProps, State> {
             errors
         });
         noerror ? this.onValid() : this.onInvalid();
-        triggerFormOnChange && this.onchange(name, value);
+        if (triggerFormOnChange) {
+            this.touched[name] = true;
+            this.onchange(name, value);
+        }
     }
     getValues() {
         return this.values;

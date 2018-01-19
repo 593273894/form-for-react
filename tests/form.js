@@ -920,7 +920,6 @@ var Form = (function (_super) {
     Form.prototype.setValue = function (name, value, triggerFormOnChange) {
         if (triggerFormOnChange === void 0) { triggerFormOnChange = false; }
         this.values[name] = value;
-        this.touched[name] = true;
         var errors = this.validateFields();
         var noerror = true;
         for (var name_2 in errors) {
@@ -933,7 +932,10 @@ var Form = (function (_super) {
             errors: errors
         });
         noerror ? this.onValid() : this.onInvalid();
-        triggerFormOnChange && this.onchange(name, value);
+        if (triggerFormOnChange) {
+            this.touched[name] = true;
+            this.onchange(name, value);
+        }
     };
     Form.prototype.getValues = function () {
         return this.values;
