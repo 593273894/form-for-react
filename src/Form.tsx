@@ -83,6 +83,11 @@ export default class Form extends React.Component<FormProps, State> {
             }
             else {
                 if (typeof this.fields[name].validate === 'function') {
+                    const validateMessage = this.fields[name].validate(this.values[name], this.values);
+                    if (typeof validateMessage !== 'string' || validateMessage !== NO_ERROR) {
+                        console.warn('Expected return value of validate() to be a string for error message ' +
+                            'or a null for validate success');
+                    }
                     errors[name] = this.fields[name].validate(this.values[name], this.values);
                 }
                 else {

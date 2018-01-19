@@ -707,7 +707,7 @@ var FormError = (function (_super) {
         var _a = this.props, name = _a.name, className = _a.className;
         var api = this.context.api;
         var error = api.getErrors()[name];
-        return (error !== __WEBPACK_IMPORTED_MODULE_3__constants__["b" /* NO_ERROR */] ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span", { className: __WEBPACK_IMPORTED_MODULE_2_classnames___default()('validation-message', className) }, error) : null);
+        return (error !== __WEBPACK_IMPORTED_MODULE_3__constants__["b" /* NO_ERROR */] ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span", { className: __WEBPACK_IMPORTED_MODULE_2_classnames___default()('validation-message', className) }, String(error)) : null);
     };
     FormError.contextTypes = {
         api: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object
@@ -891,6 +891,11 @@ var Form = (function (_super) {
             }
             else {
                 if (typeof this.fields[name_1].validate === 'function') {
+                    var validateMessage = this.fields[name_1].validate(this.values[name_1], this.values);
+                    if (typeof validateMessage !== 'string' || validateMessage !== __WEBPACK_IMPORTED_MODULE_3__constants__["b" /* NO_ERROR */]) {
+                        console.warn('Expected return value of validate() to be a string for error message ' +
+                            'or a null for validate success');
+                    }
                     errors[name_1] = this.fields[name_1].validate(this.values[name_1], this.values);
                 }
                 else {
