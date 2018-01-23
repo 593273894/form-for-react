@@ -60,6 +60,12 @@ export default class Form extends React.Component<FormProps, State> {
     addField(field: Field) {
         this.fields[field.name] = field;
         this.values[field.name] = '';
+        this.setState({
+            errors: {
+                ...this.state.errors,
+                [field.name]: null,
+            },
+        });
     }
     changeField(field: Field) {
         this.fields[field.name] = field;
@@ -67,7 +73,12 @@ export default class Form extends React.Component<FormProps, State> {
     }
     removeField(name) {
         delete this.fields[name];
-        this.values[name] = undefined;
+        delete this.values[name];
+        const errors = this.state.errors;
+        delete errors[name];
+        this.setState({
+            errors,
+        });
     }
     validateFields() {
         let errors = {};
