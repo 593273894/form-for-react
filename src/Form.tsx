@@ -60,6 +60,7 @@ export default class Form extends React.Component<FormProps, State> {
     addField(field: Field) {
         this.fields[field.name] = field;
         this.values[field.name] = '';
+        this.touched[field.name] = false;
         this.setState({
             errors: {
                 ...this.state.errors,
@@ -74,6 +75,7 @@ export default class Form extends React.Component<FormProps, State> {
     removeField(name) {
         delete this.fields[name];
         delete this.values[name];
+        delete this.touched[name];
         const errors = this.state.errors;
         delete errors[name];
         this.setState({

@@ -869,6 +869,7 @@ var Form = (function (_super) {
     Form.prototype.addField = function (field) {
         this.fields[field.name] = field;
         this.values[field.name] = '';
+        this.touched[field.name] = false;
         this.setState({
             errors: __assign({}, this.state.errors, (_a = {}, _a[field.name] = null, _a)),
         });
@@ -881,6 +882,7 @@ var Form = (function (_super) {
     Form.prototype.removeField = function (name) {
         delete this.fields[name];
         delete this.values[name];
+        delete this.touched[name];
         var errors = this.state.errors;
         delete errors[name];
         this.setState({
