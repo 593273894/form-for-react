@@ -126,7 +126,7 @@ export default class Form extends React.Component<FormProps, State> {
         const errors = this.validateFields();
         let noerror = true;
         for (let name in errors) {
-            if (errors[name] !== NO_ERROR) {
+            if (errors[name] !== NO_ERROR && errors[name] !== undefined) {
                 noerror = false;
                 break;
             }
@@ -164,7 +164,7 @@ export default class Form extends React.Component<FormProps, State> {
         const errors = this.validateFields();
         let noerror = true;
         for (let name in errors) {
-            if (errors[name] !== NO_ERROR) {
+            if (errors[name] !== NO_ERROR && errors[name] !== undefined) {
                 noerror = false;
                 break;
             }

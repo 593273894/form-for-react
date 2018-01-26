@@ -220,7 +220,8 @@ var createFromField = function (Input) {
                 var api = this.context.api;
                 var touched = api.getTouched();
                 touched = touched[name] || touched.__allTouched;
-                var hasError = api.getErrors()[name] !== __WEBPACK_IMPORTED_MODULE_4__constants__["b" /* NO_ERROR */] && touched;
+                var error = api.getErrors()[name];
+                var hasError = error !== __WEBPACK_IMPORTED_MODULE_4__constants__["b" /* NO_ERROR */] && error !== undefined && touched;
                 return (__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: __WEBPACK_IMPORTED_MODULE_2_classnames___default()('form-field', fieldClassName, { disabled: disabled, 'has-error': hasError }), style: fieldStyle },
                     this.renderLabel(),
                     this.renderInput(),
@@ -708,7 +709,7 @@ var FormError = (function (_super) {
         var _a = this.props, name = _a.name, className = _a.className;
         var api = this.context.api;
         var error = api.getErrors()[name];
-        return (error !== __WEBPACK_IMPORTED_MODULE_3__constants__["b" /* NO_ERROR */] ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span", { className: __WEBPACK_IMPORTED_MODULE_2_classnames___default()('validation-message', className) }, String(error)) : null);
+        return (error !== __WEBPACK_IMPORTED_MODULE_3__constants__["b" /* NO_ERROR */] && error !== undefined ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span", { className: __WEBPACK_IMPORTED_MODULE_2_classnames___default()('validation-message', className) }, String(error)) : null);
     };
     FormError.contextTypes = {
         api: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object
@@ -934,7 +935,7 @@ var Form = (function (_super) {
         var errors = this.validateFields();
         var noerror = true;
         for (var name_2 in errors) {
-            if (errors[name_2] !== __WEBPACK_IMPORTED_MODULE_3__constants__["b" /* NO_ERROR */]) {
+            if (errors[name_2] !== __WEBPACK_IMPORTED_MODULE_3__constants__["b" /* NO_ERROR */] && errors[name_2] !== undefined) {
                 noerror = false;
                 break;
             }
@@ -972,7 +973,7 @@ var Form = (function (_super) {
         var errors = this.validateFields();
         var noerror = true;
         for (var name_3 in errors) {
-            if (errors[name_3] !== __WEBPACK_IMPORTED_MODULE_3__constants__["b" /* NO_ERROR */]) {
+            if (errors[name_3] !== __WEBPACK_IMPORTED_MODULE_3__constants__["b" /* NO_ERROR */] && errors[name_3] !== undefined) {
                 noerror = false;
                 break;
             }

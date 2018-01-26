@@ -126,7 +126,8 @@ const createFromField = (Input) => {
             const { api } = this.context;
             let touched = api.getTouched();
             touched = touched[name] || touched.__allTouched;
-            const hasError = api.getErrors()[name] !== NO_ERROR && touched;
+            const error = api.getErrors()[name];
+            const hasError = error !== NO_ERROR && error !== undefined && touched;
             return (
                 <div className={classnames('form-field', fieldClassName, { disabled, 'has-error': hasError })} style={fieldStyle} >
                     {this.renderLabel()}

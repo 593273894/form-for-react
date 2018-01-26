@@ -34,7 +34,7 @@ class FormError extends React.Component<FormErrorProps, any> {
         const { api } = this.context;
         const error = api.getErrors()[name];
         return (
-            error !== NO_ERROR ? <span className={classnames('validation-message', className)}>{String(error)}</span> : null
+            error !== NO_ERROR && error !== undefined ? <span className={classnames('validation-message', className)}>{String(error)}</span> : null
         );
     }
 }
