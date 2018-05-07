@@ -133,6 +133,7 @@ exports[`form change 1`] = `
             >
               <label
                 className="radio"
+                key="red"
               >
                 <input
                   checked={false}
@@ -144,6 +145,7 @@ exports[`form change 1`] = `
               </label>
               <label
                 className="radio"
+                key="yellow"
               >
                 <input
                   checked={false}
@@ -155,6 +157,7 @@ exports[`form change 1`] = `
               </label>
               <label
                 className="radio"
+                key="blue"
               >
                 <input
                   checked={false}
@@ -237,6 +240,7 @@ exports[`form change 1`] = `
             >
               <label
                 className="checkbox"
+                key="apple"
               >
                 <input
                   checked={false}
@@ -248,6 +252,7 @@ exports[`form change 1`] = `
               </label>
               <label
                 className="checkbox"
+                key="banana"
               >
                 <input
                   checked={false}
@@ -336,11 +341,13 @@ exports[`form change 1`] = `
                  --- 
               </option>
               <option
+                key="cat"
                 value="cat"
               >
                 cat
               </option>
               <option
+                key="dog"
                 value="dog"
               >
                 dog
@@ -492,6 +499,7 @@ exports[`form change 2`] = `
             >
               <label
                 className="radio"
+                key="red"
               >
                 <input
                   checked={false}
@@ -503,6 +511,7 @@ exports[`form change 2`] = `
               </label>
               <label
                 className="radio checked"
+                key="yellow"
               >
                 <input
                   checked={true}
@@ -514,6 +523,7 @@ exports[`form change 2`] = `
               </label>
               <label
                 className="radio"
+                key="blue"
               >
                 <input
                   checked={false}
@@ -600,6 +610,7 @@ exports[`form change 2`] = `
             >
               <label
                 className="checkbox"
+                key="apple"
               >
                 <input
                   checked={false}
@@ -611,6 +622,7 @@ exports[`form change 2`] = `
               </label>
               <label
                 className="checkbox"
+                key="banana"
               >
                 <input
                   checked={false}
@@ -703,11 +715,13 @@ exports[`form change 2`] = `
                  --- 
               </option>
               <option
+                key="cat"
                 value="cat"
               >
                 cat
               </option>
               <option
+                key="dog"
                 value="dog"
               >
                 dog
@@ -858,6 +872,7 @@ exports[`form component change 1`] = `
             >
               <label
                 className="radio"
+                key="red"
               >
                 <input
                   checked={false}
@@ -869,6 +884,7 @@ exports[`form component change 1`] = `
               </label>
               <label
                 className="radio"
+                key="yellow"
               >
                 <input
                   checked={false}
@@ -880,6 +896,7 @@ exports[`form component change 1`] = `
               </label>
               <label
                 className="radio"
+                key="blue"
               >
                 <input
                   checked={false}
@@ -963,6 +980,7 @@ exports[`form component change 1`] = `
             >
               <label
                 className="checkbox"
+                key="apple"
               >
                 <input
                   checked={false}
@@ -974,6 +992,7 @@ exports[`form component change 1`] = `
               </label>
               <label
                 className="checkbox"
+                key="banana"
               >
                 <input
                   checked={false}
@@ -1063,11 +1082,13 @@ exports[`form component change 1`] = `
                  --- 
               </option>
               <option
+                key="cat"
                 value="cat"
               >
                 cat
               </option>
               <option
+                key="dog"
                 value="dog"
               >
                 dog
@@ -1220,6 +1241,7 @@ exports[`form component change 2`] = `
             >
               <label
                 className="radio"
+                key="red"
               >
                 <input
                   checked={false}
@@ -1231,6 +1253,7 @@ exports[`form component change 2`] = `
               </label>
               <label
                 className="radio checked"
+                key="yellow"
               >
                 <input
                   checked={true}
@@ -1242,6 +1265,7 @@ exports[`form component change 2`] = `
               </label>
               <label
                 className="radio"
+                key="blue"
               >
                 <input
                   checked={false}
@@ -1329,6 +1353,7 @@ exports[`form component change 2`] = `
             >
               <label
                 className="checkbox"
+                key="apple"
               >
                 <input
                   checked={false}
@@ -1340,6 +1365,7 @@ exports[`form component change 2`] = `
               </label>
               <label
                 className="checkbox"
+                key="banana"
               >
                 <input
                   checked={false}
@@ -1433,11 +1459,13 @@ exports[`form component change 2`] = `
                  --- 
               </option>
               <option
+                key="cat"
                 value="cat"
               >
                 cat
               </option>
               <option
+                key="dog"
                 value="dog"
               >
                 dog
@@ -1586,6 +1614,7 @@ exports[`form submit 1`] = `
             >
               <label
                 className="radio"
+                key="red"
               >
                 <input
                   checked={false}
@@ -1597,6 +1626,7 @@ exports[`form submit 1`] = `
               </label>
               <label
                 className="radio"
+                key="yellow"
               >
                 <input
                   checked={false}
@@ -1608,6 +1638,7 @@ exports[`form submit 1`] = `
               </label>
               <label
                 className="radio"
+                key="blue"
               >
                 <input
                   checked={false}
@@ -1690,6 +1721,7 @@ exports[`form submit 1`] = `
             >
               <label
                 className="checkbox"
+                key="apple"
               >
                 <input
                   checked={false}
@@ -1701,6 +1733,7 @@ exports[`form submit 1`] = `
               </label>
               <label
                 className="checkbox"
+                key="banana"
               >
                 <input
                   checked={false}
@@ -1789,11 +1822,13 @@ exports[`form submit 1`] = `
                  --- 
               </option>
               <option
+                key="cat"
                 value="cat"
               >
                 cat
               </option>
               <option
+                key="dog"
                 value="dog"
               >
                 dog
@@ -1944,6 +1979,7 @@ exports[`form submit 2`] = `
             >
               <label
                 className="radio checked"
+                key="red"
               >
                 <input
                   checked={true}
@@ -1955,6 +1991,7 @@ exports[`form submit 2`] = `
               </label>
               <label
                 className="radio"
+                key="yellow"
               >
                 <input
                   checked={false}
@@ -1966,6 +2003,7 @@ exports[`form submit 2`] = `
               </label>
               <label
                 className="radio"
+                key="blue"
               >
                 <input
                   checked={false}
@@ -2056,6 +2094,7 @@ exports[`form submit 2`] = `
             >
               <label
                 className="checkbox checked"
+                key="apple"
               >
                 <input
                   checked={true}
@@ -2067,6 +2106,7 @@ exports[`form submit 2`] = `
               </label>
               <label
                 className="checkbox"
+                key="banana"
               >
                 <input
                   checked={false}
@@ -2159,11 +2199,13 @@ exports[`form submit 2`] = `
                  --- 
               </option>
               <option
+                key="cat"
                 value="cat"
               >
                 cat
               </option>
               <option
+                key="dog"
                 value="dog"
               >
                 dog

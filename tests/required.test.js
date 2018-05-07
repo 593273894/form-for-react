@@ -16,7 +16,7 @@ test('show required message, and set a \'has-error\' className after touched', (
     component.find('#input').simulate('change', { target: { value: '' } });
     let text = component.find('.form').childAt(0).find('.validation-message').text();
     expect(text).toEqual(defaultRequiredMessage);
-    let hasError = component.find('.form').childAt(0).hasClass('has-error');
+    let hasError = component.find('.form').childAt(0).render().hasClass('has-error');
     expect(hasError).toEqual(true);
 
     expect(component).toMatchSnapshot();
@@ -39,7 +39,7 @@ test('show custom required message', () => {
     let text = component.find('.form').childAt(0).find('.validation-message').text();
     expect(text).toEqual(requiredMessage);
 
-    let hasError = component.find('.form').childAt(0).hasClass('has-error');
+    let hasError = component.find('.form').childAt(0).render().hasClass('has-error');
     expect(hasError).toEqual(true);
 
     expect(component).toMatchSnapshot();
@@ -62,7 +62,7 @@ test('required message can be empty string', () => {
     let text = component.find('.form').childAt(0).find('.validation-message').text();
     expect(text).toEqual(requiredMessage);
 
-    let hasError = component.find('.form').childAt(0).hasClass('has-error');
+    let hasError = component.find('.form').childAt(0).render().hasClass('has-error');
     expect(hasError).toEqual(true);
 
     expect(component).toMatchSnapshot();
@@ -82,7 +82,7 @@ test('show required message, and set a \'has-error\' className after form submit
     component.find('.form').simulate('submit');
     let text = component.find('.form').childAt(0).find('.validation-message').text();
     expect(text).toEqual(defaultRequiredMessage);
-    let hasError = component.find('.form').childAt(0).hasClass('has-error');
+    let hasError = component.find('.form').childAt(0).render().hasClass('has-error');
     expect(hasError).toEqual(true);
 
     expect(component).toMatchSnapshot();

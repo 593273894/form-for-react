@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const env = process.env.NODE_ENV;
 
@@ -25,10 +26,13 @@ module.exports = {
         extensions: [".webpack.js", ".web.js", ".ts", ".tsx", ".js"]
     },
     module: {
-        loaders: [{
+        rules: [{
             test: /\.(ts|tsx)$/,
             exclude: /node_modules/,
             loader: "ts-loader",
         }]
+    },
+    optimization: {
+        minimize: false,
     },
 };
