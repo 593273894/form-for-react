@@ -521,8 +521,8 @@ var createFromField = function (Input) {
             FormField.prototype.renderInput = function () {
                 var _this = this;
                 var _a = this.props, name = _a.name, onChange = _a.onChange, value = _a.value, // props for input component
-                label = _a.label, fieldClassName = _a.fieldClassName, fieldStyle = _a.fieldStyle, disabled = _a.disabled, validate = _a.validate, requiredMessage = _a.requiredMessage, required = _a.required, help = _a.help, // props for field, don't pass to input component
-                rest = createFormField_rest(_a, ["name", "onChange", "value", "label", "fieldClassName", "fieldStyle", "disabled", "validate", "requiredMessage", "required", "help"]) // user's props
+                label = _a.label, fieldClassName = _a.fieldClassName, fieldStyle = _a.fieldStyle, validate = _a.validate, requiredMessage = _a.requiredMessage, required = _a.required, help = _a.help, // props for field, don't pass to input component
+                rest = createFormField_rest(_a, ["name", "onChange", "value", "label", "fieldClassName", "fieldStyle", "validate", "requiredMessage", "required", "help"]) // user's props
                 ;
                 var api = this.context.api;
                 return (external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement("div", { className: "field-input" },
